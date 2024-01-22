@@ -1,0 +1,46 @@
+project:
+  type: website
+
+website:
+  title: "Technistema"
+  favicon: "inst/brad_headshot_faded.png"
+  body-footer: <script data-goatcounter="https://datalogos.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+  margin-header: subscribe.html
+  navbar:
+    left:
+    
+      - href: index.qmd
+        text: Home
+        
+      - text: "{{< fa list >}} Blog"
+        href: blog
+        
+      - text: "{{< fa chalkboard-user >}} Teaching"
+        href: teaching.qmd
+        
+      - text: "{{< fa bullhorn >}} Talks"
+        href: talks
+        
+        
+      - text: "{{< fa book >}} Writing"
+        href: writing.qmd
+        
+      - text: "{{< fa paper-plane >}} Contact"
+        href: contact.qmd
+        
+    right:
+    
+      - icon: github
+        href: https://github.com/bradlindblad
+        
+      - icon: linkedin
+        href: https://www.linkedin.com/in/bradlindblad
+
+format:
+  html:
+    theme: lux
+    css: styles.css
+    toc: true
+
+editor: visual
+

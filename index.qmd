@@ -1,0 +1,44 @@
+---
+title: "Brad Lindblad, MBA"
+image: "inst/brad_headshot_faded.png"
+about:
+  template: trestles
+  image-shape: rounded
+  image-width: 20em
+  links:
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/bradlindblad/
+ 
+    - icon: github 
+      text: Github
+      href: https://github.com/bradlindblad
+      
+      # in terminal, run: quarto add quarto-ext/fontawesome
+    - text: "{{< fa envelope  >}} Email"
+      href: mailto:me@bradlindblad.com
+---
+
+## Bio
+
+He is a data scientist.
+
+------------------------------------------------------------------------
+
+## Projects
+
+He has a nice family.
+
+------------------------------------------------------------------------
+
+## Skills
+
+------------------------------------------------------------------------
+
+## Education & awards
+
+------------------------------------------------------------------------
+
+## Personal life
+
+Link to woodworking blog

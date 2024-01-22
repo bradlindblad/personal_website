@@ -1,0 +1,29 @@
+{
+  "index.qmd": {
+    "index.html": "5477e4f5"
+  },
+  "about.qmd": {
+    "about.html": "89ed456b"
+  },
+  "contact.qmd": {
+    "contact.html": "f4b48547"
+  },
+  "writing.qmd": {
+    "writing.html": "cbb2ce25"
+  },
+  "blog.qmd": {
+    "blog.html": "e67225c8"
+  },
+  "talks.qmd": {
+    "talks.html": "26c37bb4"
+  },
+  "teaching.qmd": {
+    "teaching.html": "775e040a"
+  },
+  "talks/index.qmd": {
+    "index.html": "2aa9d1b8"
+  },
+  "blog/index.qmd": {
+    "index.html": "8fdb9233"
+  }
+}
