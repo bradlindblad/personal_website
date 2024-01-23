@@ -37,7 +37,7 @@ website:
     
     # generates RSS feed
     listing:
-      contents: posts
+      contents: posts/**/*.qmd
       sort: "date desc"
       type: default
       categories: true
