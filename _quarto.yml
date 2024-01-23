@@ -37,7 +37,6 @@ website:
     
     # generates RSS feed
     listing:
-      listing:
       contents: posts
       sort: "date desc"
       type: default
