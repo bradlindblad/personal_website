@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.280">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Brad Lindblad">
+<meta name="dcterms.date" content="2019-12-30">
+<meta name="description" content="Probably with a whiskey soda">
+
+<title>Technistema - How Would Hemingway Write Code?</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../inst/brad_headshot_faded.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Technistema</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../posts">
+ <span class="menu-text"><i class="fa-solid fa-list" aria-label="list"></i> Blog</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../talks">
+ <span class="menu-text"><i class="fa-solid fa-bullhorn" aria-label="bullhorn"></i> Talks</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../teaching.html">
+ <span class="menu-text"><i class="fa-solid fa-chalkboard-user" aria-label="chalkboard-user"></i> Teaching</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../writing.html">
+ <span class="menu-text"><i class="fa-solid fa-book" aria-label="book"></i> Writing</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../contact.html">
+ <span class="menu-text"><i class="fa-solid fa-paper-plane" aria-label="paper-plane"></i> Contact</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/bradlindblad"><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/bradlindblad"><i class="bi bi-linkedin" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar"><div class="quarto-margin-header"><div class="margin-header-item">
+<!-- Begin Mailchimp Signup Form -->
+<link href="//cdn-images.mailchimp.com/embedcode/slim-10_7.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+    #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
+    /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+       We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+</style>
+<div id="mc_embed_signup">
+<form action="https://technistema.us4.list-manage.com/subscribe/post?u=f26fc35d39dcb0e92c5821415&amp;id=63967509e3" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
+    <div id="mc_embed_signup_scroll">
+    <label for="mce-EMAIL">Get blog posts sent to your inbox</label>
+    <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required="">
+    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_f26fc35d39dcb0e92c5821415_63967509e3" tabindex="-1" value=""></div>
+    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+    </div>
+</form>
+</div>
+</div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#he-would-study-the-greats" id="toc-he-would-study-the-greats" class="nav-link active" data-scroll-target="#he-would-study-the-greats">He would study the greats</a></li>
+  <li><a href="#he-would-code-from-experience" id="toc-he-would-code-from-experience" class="nav-link" data-scroll-target="#he-would-code-from-experience">He would code from experience</a></li>
+  <li><a href="#he-would-code-longhand" id="toc-he-would-code-longhand" class="nav-link" data-scroll-target="#he-would-code-longhand">He would code longhand</a></li>
+  <li><a href="#he-would-stop-strategically" id="toc-he-would-stop-strategically" class="nav-link" data-scroll-target="#he-would-stop-strategically">He would stop strategically</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">How Would Hemingway Write Code?</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">coding</div>
+    <div class="quarto-category">writing</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    Probably with a whiskey soda
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Brad Lindblad </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">December 30, 2019</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+</header>
+
+<p><a href="https://www.linkedin.com/in/bradlindblad/">LinkedIn</a> | <a href="https://github.com/bradlindblad/">Github</a> | <a href="https://technistema.com/">Blog</a> | <a href="https://technistema.com/contact/">Subscribe</a></p>
+<p><img src="hemingway.jpeg" class="img-fluid"></p>
+<p>How many times have you looked back on code you wrote a few months back and thought, “what the hell was that?” I regularly scratch my head at code I wrote a few days prior, especially if I rationalized my spaghetti code away as a “scratch file.”</p>
+<p>There is objectively good code and bad code, in the same way there is good writing and bad writing. Writing good code isn’t all that different from writing good prose. Both good code and writing need to follow certain rules and best practices, as well as artfully solve many problems that lie outside the scope of rigid covenant.</p>
+<p>Great code is concise, glaring in its intent, and brief - following the <a href="https://en.wikipedia.org/wiki/Don%27t_repeat_yourself">DRY principle</a>. There was no other writer who followed these coding practices to their natural conclusion <em>in literature</em> better than Ernest Hemingway. Hemingway wrote seven novels in the first half of the 20th century and won the Nobel Prize for Literature in 1954. He was the master of the simple sentence and the restrained narrative, developing this style as a young reporter.</p>
+<p>My thought experiment: how would Hemingway write code if he were a data scientist or a web developer? What can we learn from the techniques that crafted some of the best American literature? Let’s find out.</p>
+<section id="he-would-study-the-greats" class="level2">
+<h2 class="anchored" data-anchor-id="he-would-study-the-greats">He would study the greats</h2>
+<blockquote class="blockquote">
+<p>Samuelson: But reading all the good writers must discourage you. Hemingway: Then you ought to be discouraged.</p>
+</blockquote>
+<p>In the open-source world, we have free access to some of the best code ever written. All we have to do is open GitHub and browse the source code of our favorite projects.</p>
+<p>If Hemingway wrote R code like I do, he would have read all the <a href="https://www.tidyverse.org/">Tidyverse</a> “books” written by the phenomenal R scientist Hadley Wickham. These are the classics in the R community; many R developers regularly consult these repos when writing code for inspiration or ideas on how to solve a problem.</p>
+<p>Since ancient times, most forms of art have had some kind of master-apprentice program. Rembrandt didn’t attend an online art school and immediately brush out <em>The Nightwatch</em>. He studied under a master to observe and absorb everything he could.</p>
+<p>Today, the apprenticeship process is not so clearly defined but continues to exist in other forms. In 1934, an aspiring young Minnesotan named Samuelson hitchhiked to Hemingway’s <em>casa</em> in Key West to boldly knock on his door, putting his lot in Fate’s hands. Hem not only invited him over the next day, but he hired him to watch his boat for the next year, with a great deal of mentoring along the way.</p>
+<p>At one point Samuelson asked what he should read to become a great writer. Hem produced a long list of books which he pressed on Samuelson to devour.</p>
+<blockquote class="blockquote">
+<p>Samuelson: Should a writer have read all of those? Hemingway: All of those and plenty more. Otherwise he doesn’t know what he has to beat.</p>
+</blockquote>
+</section>
+<section id="he-would-code-from-experience" class="level2">
+<h2 class="anchored" data-anchor-id="he-would-code-from-experience">He would code from experience</h2>
+<p>One of the reason’s Hem’s books are classics is because he wrote from his own experience. His time as an ambulance driver in Italy during the Great War fueled his masterpiece <em>A Farewell To Arms</em>. His love of the outdoors dripped onto the pages of <em>The Old Man and the Sea</em>. He didn’t doodle from imagination but from vivid memories and tactile experiences that the reader finds absolutely authentic.</p>
+<p>But how does a developer code from experience? Two words: business knowledge. If you’re designing an app to optimize freight deliveries for example, ride with a delivery driver for a week to gain a different perspective that your rubber duckie could never provide. Go out and learn the How and Why of what is desired, from the people who will actually use the thing.</p>
+<blockquote class="blockquote">
+<p>Hemingway: Whatever success I have had has been through writing what I know about.</p>
+</blockquote>
+</section>
+<section id="he-would-code-longhand" class="level2">
+<h2 class="anchored" data-anchor-id="he-would-code-longhand">He would code longhand</h2>
+<p>Hem wrote much of his 50,000+ word novels longhand, with pen and paper. Even though he could have written faster with a typewriter, he still crafted most of his first drafts the ancient way: applying carbon to pressed pulp.</p>
+<p>Modern science now tells us that writing longhand engages our brain more, helps us to be more creative, and increases comprehension - all benefits lacking from computer composition.</p>
+<p>While the idea of writing code longhand may abhor you, especially if you lean a bit too heavily on your IDE’s intellisense, you’ll realize that you will Think before writing when the effort to write is greater, instead of thinking after typing.</p>
+<p>I usually map out the salient chunks of my code on paper before even thinking of firing up my computer. I outline all the functions, map out which modules go where, etc., on whatever paper is handy. At that point, I’ll open my laptop and start carefully revising my ideas until I have something solid - a good first draft of the code. Next, I’ll work through one to three revisions, making changes and asking for feedback from peers. When I follow this practice, I definitely do NOT have the “WFT is this” feeling when reviewing it in the future.</p>
+</section>
+<section id="he-would-stop-strategically" class="level2">
+<h2 class="anchored" data-anchor-id="he-would-stop-strategically">He would stop strategically</h2>
+<p>In the age of the full stack and 10x developer, we could take a cue from Hem on resting. In one letter he outlines his thoughts on what we now call the work-home balance:</p>
+<blockquote class="blockquote">
+<p>Hemingway: It is better to produce half as much, get plenty of exercise and not go crazy then to speed up so that your head is hardly normal.</p>
+</blockquote>
+<p>Hem would begin a new adventure after finishing a manuscript or go fishing in the Gulf of Mexico when he had writer’s block. He knew the importance of getting his head out of the game at regular intervals.</p>
+<p>Developers take pride in the odd hours they keep or the late-night work sessions that empty their internal reservoirs. Hem knew that he only had at best a handful of productive hours in any one day, so he didn’t attempt to force work after the golden hours had waned.</p>
+<p>Do you ever stop reading a book on a cliffhanger? Just for the excitement, so when you sit down to read again you’re already jacked to see what happens? Hem did the same thing when he was writing his books. His protégé Samuelson asked him when he should knock off writing for the day, to which he responded:</p>
+<blockquote class="blockquote">
+<p>Hemingway: The best way is always to stop when you are going good and when you know what will happen next. If you do that every day when you are writing a novel you will never be stuck…don’t think about it or worry about it until you start to write the next day, That way your subconscious will work on it all the time.</p>
+</blockquote>
+<p>How often do you carry your work home with you? intentional or not? Junior web developer Hemingway would discourage this behavior because he learned that if he left his work at work, the next morning his subconscious would have the answer he was looking for all ready for him.</p>
+<blockquote class="blockquote">
+<p>Hemingway: The first draft of anything is shit.</p>
+</blockquote>
+<p>How much of your code gets past the first draft? Maybe it’s missing a few comments, or large chunks are carelessly commented out. If you were a craftsman, creating furniture that will be around long enough for your grandchildren to use, would you skip the hand sanding, leaving rough corners and blemishes?</p>
+<p>While it may be entertaining to imagine Hemingway resolving a merge conflict, we can learn much about the development process in general from the man.</p>
+<p>For further reading I suggest Hemingway’s <em>For Whom the Bell Tolls</em> as a good entry point, and <em>Ernest Hemingway on Writing</em> for more on his process.</p>
+<hr>
+<p><strong><em>Want more content like this?</em></strong> <a href="https://technistema.com/contact/">Subscribe here</a></p>
+
+
+</section>
+
+<script data-goatcounter="https://datalogos.goatcounter.com/count" async="" src="//gc.zgo.at/count.js"></script></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

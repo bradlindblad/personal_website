@@ -1,0 +1,81 @@
+---
+categories:
+- python
+- R
+- notes
+- hacking
+date: 2021-07-13
+description: Getting more out of Roam with a little bit of python
+image: 'https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fdelete%2FbzsUyxsJ8L.png?alt=media&token=0936d722-b637-40d7-bd59-f25ccbb7e305'
+title: Analyzing Roam Research Attribute Tables with Python
+author: Brad Lindblad
+---
+
+
+[LinkedIn](https://www.linkedin.com/in/bradlindblad/) | [Github](https://github.com/bradlindblad/) | [Blog](https://technistema.com/) | [Subscribe](https://technistema.com/contact/)
+
+![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fdelete%2FbzsUyxsJ8L.png?alt=media&token=0936d722-b637-40d7-bd59-f25ccbb7e305)
+
+*Image Source: roamresearch.com*
+
+
+[Roam Research](https://roamresearch.com/) is a revolutionary note-taking tool for networked thought. As a data scientist and reader, I take many notes on many different topics. I've tried many different note-taking apps from Evernote and OneNote to the bare bones of Simple Note. I've always bumped into a problem with these tools, which is that the design and format of the tool restricted how I took notes.
+
+For example, with Evernote you are forced to more or less put an idea on a single card, with little freedom in relating that note to other notes in your Evernote corpus. The search function allowed you to find specific words, but each idea is and was indefinitely separated from the others.
+
+The folders and tagging provide some semblance of structure, but eventually your work or life will change such that you'll want to rearrange that structure. Not fun.
+
+The human mind doesn't work that way. Studies have shown that the neurological structure of the brain forms an incomprehensibly complex network that modern machine learning barely intimates.
+
+### Why Roam?
+Roam allows you to sputter ideas without having to worry about which folder to place them in, or if an idea could fit into multiple folders. You don't have to pick just one location for that idea to languish in. For instance, if you have a nice python code snippet for working in Databricks that you'd like to save for later, you don't have to worry about whether to place it in your *databricks snippet* folder or your *python snippet* folder; you simply tag the code with both and it will appear in both. An idea can live in two places concurrently, no sweat.
+
+This is huge for allowing you to simply take the note and trust the system to organize for you. Roam has allowed me to consolidate the following activities and functions under a single tool:
+        - Code snippets and cheats
+        - Commonplace book
+        - Bible study
+        - Short-form writing (like this article)
+        - Data science lab notebook
+        - Goal setting and tracking
+        - And, for the purposes of this article, habit tracking.
+
+### Habit tracking in Roam
+I wanted to track the arthritis in one of my hands along with a few other variables to look for any indication of a relationship. There are many tools and apps that are made for this very thing, but my goal is to do as much as I can in Roam.
+
+We use a feature in Roam called attribute tables to accomplish this. [This article](https://www.reddit.com/r/RoamResearch/comments/ej2pid/how_to_build_a_habit_tracker_in_roam/) on Reddit does a great job of explaining how to set up attribute tables, so check that out if you've never made one before. The output of a habit tracking table looks like this:
+
+  ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fdelete%2FHPS58Q0LtU.png?alt=media&token=ae758fd1-7a1e-4a41-a1ee-a889860e4b94)
+
+If you were to look under the hood at the table, you would find that it looks an awful lot like an html table. The [Pandas](https://pandas.pydata.org/) python library has a nice little function for parsing simple html tables called `read_html()`, and don't ya know it parses this Roam attribute table real slick.
+
+
+### The python script
+The best way I found to parse the table was to download the actual html page with your browsers download function; in Brave it's as simple as right-clicking on the page, hitting Save as > Complete Webpage, and saving to a location. I like to have a daily page open which usually just has one table. If you have multiple tables, you will have to modify the last line of the script a bit to select it.
+
+After that, this little python script reads your Roam attribute table into a pandas dataframe:
+
+```python
+import pandas as pd
+
+# download daily page html to local
+FILE = "/home/brad/Desktop/July 12th, 2021.html"
+
+html = pd.read_html(FILE)
+
+df = html[0]
+
+```
+
+and gives us:
+
+  ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fdelete%2FhnnyY2ZbwK.png?alt=media&token=d46a4e2e-48b8-433a-b4d8-ad8000b46e1d)
+
+Now you can do any analysis on your habits that you wish, all within the comforts of Roam and python.
+
+
+
+
+---
+  ***Want more content like this?***
+
+  [Subscribe here](https://technistema.com/contact/)

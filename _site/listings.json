@@ -1,10 +1,29 @@
 [
   {
-    "listing": "/talks/index.html",
-    "items": []
+    "listing": "/posts/index.html",
+    "items": [
+      "/posts/proverbs-esv-support/index.html",
+      "/posts/announcing-proverbs-r-package/index.html",
+      "/posts/using-github-action-python-telegram-meat/index.html",
+      "/posts/roam-attribute-table-analysis/index.html",
+      "/posts/announcing-the-cheatsheet-package/index.html",
+      "/posts/tidyUSDA-version-031-is-available/index.html",
+      "/posts/professional-financial-reports-with-rmarkdown/index.html",
+      "/posts/introducing-schrute-jl-the-office-transcripts-data-set-for-julia/index.html",
+      "/posts/my-first -linux-snapcraft-app/index.html",
+      "/posts/using-the-biblepi-program/index.html",
+      "/posts/python-text-analysis-with-the-schrutepy-package/index.html",
+      "/posts/how-would-hemingway-write-code/index.html",
+      "/posts/using-r-to-analyze-fargo-crime-data/index.html",
+      "/posts/introducing-the-schrute-package-the-entire-transcripts-from-the-office/index.html",
+      "/posts/building-a-corporate-r-package-for-pleasure-and-profit/index.html",
+      "/posts/announcing-tidyusda-a-package-for-working-with-usda-data/index.html"
+    ]
   },
   {
-    "listing": "/blog/index.html",
-    "items": []
+    "listing": "/talks/index.html",
+    "items": [
+      "/talks/professional-financial-reports-with-rmarkdown/index.html"
+    ]
   }
 ]

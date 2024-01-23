@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.280">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Brad Lindblad">
+<meta name="dcterms.date" content="2019-12-23">
+<meta name="description" content="Into the woodchipper">
+
+<title>Technistema - Using R to Analyze Fargo Crime Data</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../inst/brad_headshot_faded.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Technistema</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../posts">
+ <span class="menu-text"><i class="fa-solid fa-list" aria-label="list"></i> Blog</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../talks">
+ <span class="menu-text"><i class="fa-solid fa-bullhorn" aria-label="bullhorn"></i> Talks</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../teaching.html">
+ <span class="menu-text"><i class="fa-solid fa-chalkboard-user" aria-label="chalkboard-user"></i> Teaching</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../writing.html">
+ <span class="menu-text"><i class="fa-solid fa-book" aria-label="book"></i> Writing</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../contact.html">
+ <span class="menu-text"><i class="fa-solid fa-paper-plane" aria-label="paper-plane"></i> Contact</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/bradlindblad"><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/bradlindblad"><i class="bi bi-linkedin" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar"><div class="quarto-margin-header"><div class="margin-header-item">
+<!-- Begin Mailchimp Signup Form -->
+<link href="//cdn-images.mailchimp.com/embedcode/slim-10_7.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+    #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
+    /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+       We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+</style>
+<div id="mc_embed_signup">
+<form action="https://technistema.us4.list-manage.com/subscribe/post?u=f26fc35d39dcb0e92c5821415&amp;id=63967509e3" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
+    <div id="mc_embed_signup_scroll">
+    <label for="mce-EMAIL">Get blog posts sent to your inbox</label>
+    <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required="">
+    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_f26fc35d39dcb0e92c5821415_63967509e3" tabindex="-1" value=""></div>
+    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+    </div>
+</form>
+</div>
+</div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#problem-statements" id="toc-problem-statements" class="nav-link active" data-scroll-target="#problem-statements">Problem Statements</a></li>
+  <li><a href="#assumptions" id="toc-assumptions" class="nav-link" data-scroll-target="#assumptions">Assumptions</a></li>
+  <li><a href="#methods" id="toc-methods" class="nav-link" data-scroll-target="#methods">Methods</a></li>
+  <li><a href="#which-month-has-the-most-crime" id="toc-which-month-has-the-most-crime" class="nav-link" data-scroll-target="#which-month-has-the-most-crime">Which month has the most crime?</a></li>
+  <li><a href="#which-weekday-has-the-most-crime" id="toc-which-weekday-has-the-most-crime" class="nav-link" data-scroll-target="#which-weekday-has-the-most-crime">Which weekday has the most crime?</a></li>
+  <li><a href="#impaired-driver" id="toc-impaired-driver" class="nav-link" data-scroll-target="#impaired-driver">Impaired Driver</a></li>
+  <li><a href="#harassment" id="toc-harassment" class="nav-link" data-scroll-target="#harassment">Harassment</a></li>
+  <li><a href="#what-time-of-day-has-the-most-crime" id="toc-what-time-of-day-has-the-most-crime" class="nav-link" data-scroll-target="#what-time-of-day-has-the-most-crime">What time of day has the most crime?</a></li>
+  <li><a href="#where-are-crimes-committed" id="toc-where-are-crimes-committed" class="nav-link" data-scroll-target="#where-are-crimes-committed">Where are crimes committed?</a></li>
+  <li><a href="#interesting-finds" id="toc-interesting-finds" class="nav-link" data-scroll-target="#interesting-finds">Interesting Finds</a></li>
+  <li><a href="#conclusions" id="toc-conclusions" class="nav-link" data-scroll-target="#conclusions">Conclusions</a></li>
+  <li><a href="#further-research" id="toc-further-research" class="nav-link" data-scroll-target="#further-research">Further Research</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Using R to Analyze Fargo Crime Data</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">R</div>
+    <div class="quarto-category">analysis</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    Into the woodchipper
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Brad Lindblad </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">December 23, 2019</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+</header>
+
+<p>By: <strong><em>Brad Lindblad</em></strong><br>
+<a href="https://www.linkedin.com/in/bradlindblad/">LinkedIn</a> | <a href="https://github.com/bradlindblad/">Github</a> | <a href="https://technistema.com/">Blog</a> | <a href="https://technistema.com/contact/">Subscribe</a></p>
+<p><em>tl;dr: If you are impatient and want to go straight to the fun stuff, here is a <a href="https://bradleylindblad.shinyapps.io/Fargo_Crime/">link</a> to the interactive web dashboard that I built to supplement this analysis. Best viewed on desktop PC.</em></p>
+<p><img src="1.png" class="img-fluid"></p>
+<p>On a recent Monday afternoon that I would normally have spent slumped over my desk gingerly pecking out bits of code, I stumbled across an article about my home town that made me do a double-take. <a href="http://www.inforum.com/news/3775550-fargo-violent-crime-tops-us-average-first-time">“Fargo violent crime tops U.S. national average for the first time.”</a> The article details how the once sleepy farming community nestled in a fertile and flat ancient lake bed had surpassed the national violent crime rate.</p>
+<p>I’m a new father so I wasn’t a little bit alarmed at these claims, so I did what any data scientist would do in that situation, I hunted down some data to learn more. Fortunately, the Fargo Police Department publishes their <a href="http://fargond.gov/city-government/departments/police/police-records-data/dispatch-logs">dispatch logs</a> which detail all of the calls that are made to police. There is also a handy <a href="https://www.crimereports.com/city/Fargo%2C%20ND#!/dashboard?incident_types=Assault%252CAssault%2520with%2520Deadly%2520Weapon%252CBreaking%2520%2526%2520Entering%252CDisorder%252CDrugs%252CHomicide%252CKidnapping%252CLiquor%252COther%2520Sexual%2520Offense%252CProperty%2520Crime%252CProperty%2520Crime%2520Commercial%252CProperty%2520Crime%2520Residential%252CQuality%2520of%2520Life%252CRobbery%252CSexual%2520Assault%252CSexual%2520Offense%252CTheft%252CTheft%2520from%2520Vehicle%252CTheft%2520of%2520Vehicle&amp;start_date=2017-04-26&amp;end_date=2017-05-10&amp;days=sunday%252Cmonday%252Ctuesday%252Cwednesday%252Cthursday%252Cfriday%252Csaturday&amp;start_time=0&amp;end_time=23&amp;include_sex_offenders=false&amp;lat=46.865389&amp;lng=-96.829027&amp;zoom=13&amp;current_tab=map&amp;shapeIds=">map application</a> that helps visualize where the “danger zones” are in two dimensions. But, I wanted to know more. So I formulated a set of questions that I’ll answer below using the dispatch data from 2017.</p>
+<section id="problem-statements" class="level2">
+<h2 class="anchored" data-anchor-id="problem-statements">Problem Statements</h2>
+<ul>
+<li>Question 1: Which month has the most crime?</li>
+<li>Question 2: Which weekday has the most crime?</li>
+<li>Question 3: What time of day has the most crime?</li>
+<li>Question 4: Where are crimes committed?</li>
+</ul>
+<p>But first, let’s get the assumptions and methods out of the way.</p>
+</section>
+<section id="assumptions" class="level2">
+<h2 class="anchored" data-anchor-id="assumptions">Assumptions</h2>
+<ul>
+<li><ol type="1">
+<li>Of the categories of crime in the dispatch logs, we will be looking at the calls that are actually crimes, for example, we will ignore parking complaints, chest pain and the like.</li>
+</ol></li>
+<li><ol start="2" type="1">
+<li>Each call incident is reported at the block level, meaning our maps will be accurate to the block, not to the house or address.</li>
+</ol></li>
+<li><ol start="3" type="1">
+<li>For brevity, I will be using the word “crime” as a substitute for “dispatch calls,” with the assumption that dispatch calls are generally indicative of crime.</li>
+</ol></li>
+</ul>
+</section>
+<section id="methods" class="level2">
+<h2 class="anchored" data-anchor-id="methods">Methods</h2>
+<p>The <a href="https://en.wikipedia.org/wiki/R_(programming_language)">R computing language</a> was used to perform these analyses. The complete source code can be found at this <a href="https://github.com/bradlindblad/Fargo_Crime">Github repository</a>.</p>
+</section>
+<section id="which-month-has-the-most-crime" class="level2">
+<h2 class="anchored" data-anchor-id="which-month-has-the-most-crime">Which month has the most crime?</h2>
+<p>Fargo gets both hot and cold weather, but the hamlet is better known for the latter in popular culture, (thanks, Coen Brothers/FX!). Cripes, when you do an image search for Fargo, all you get are posters for the 1996 film and a bloodied Steve Buscemi:</p>
+<p><img src="2.png" class="img-fluid"></p>
+<p>People in Northern climates know that “cabin fever” is a real thing, although not as extreme as Jack Nicholson’s interpretation in The Shining. My point is that crime is simply more difficult when you have to scrape the windshield and warm up the engine of a vehicle before boosting it.</p>
+<p>Before I looked at the data, I assumed that crime would be sparse in the cold months, which can start as early as October and lead into May.</p>
+<p><img src="3.png" class="img-fluid"></p>
+<p>The chart above is known as a calendar heat map. It shows the crime frequency by month as well as day of week. The cooler (purple) colors indicate low crime levels, and the warmer (yellow) colors indicate high crime levels. As I suspected, November through February were relatively tame months compared to the <em>bacchanals</em> of June and September.</p>
+<p><img src="4.png" class="img-fluid"></p>
+<p>Ahh, now this bar chart makes it more clear. It seems that the frosty months starting in January leading up to May are a metaphorical ramp to the depraved summer months, with June being the pinnacle of this debauchery.</p>
+</section>
+<section id="which-weekday-has-the-most-crime" class="level2">
+<h2 class="anchored" data-anchor-id="which-weekday-has-the-most-crime">Which weekday has the most crime?</h2>
+<p>I think a bar chart will do the trick for this question as well.</p>
+<p><img src="5.png" class="img-fluid"></p>
+<p>Well this makes sense. As folks get busy in their work week, they have less time for being #savage than on the weekend. I’m curious, are certain crimes more common on different days of the week? For that, I’ll pull some screenshots from the <a href="http://bradleylindblad.shinyapps.io/Fargo_Crime">interactive dashboard</a>:</p>
+</section>
+<section id="impaired-driver" class="level2">
+<h2 class="anchored" data-anchor-id="impaired-driver">Impaired Driver</h2>
+<p><img src="6.png" class="img-fluid"></p>
+<p>People party more on the weekend; pretty obvious.</p>
+</section>
+<section id="harassment" class="level2">
+<h2 class="anchored" data-anchor-id="harassment">Harassment</h2>
+<p><img src="7.png" class="img-fluid"></p>
+<p>Looking at the dispatch logs, it seems like many of the calls are in response to phone harassment, like scammers. Apparently Monday is their big day at the scammer offices.</p>
+</section>
+<section id="what-time-of-day-has-the-most-crime" class="level2">
+<h2 class="anchored" data-anchor-id="what-time-of-day-has-the-most-crime">What time of day has the most crime?</h2>
+<p><img src="8.png" class="img-fluid"></p>
+<p>I didn’t expect to see these results. Apparently, crime drops off around midnight, before picking back up again around bar close at two AM. For simplicity, I grouped the different offence types by three subcategories.</p>
+</section>
+<section id="where-are-crimes-committed" class="level2">
+<h2 class="anchored" data-anchor-id="where-are-crimes-committed">Where are crimes committed?</h2>
+<p><img src="9.gif" class="img-fluid"></p>
+<p>In general, there is crime all over the city. The downtown area, however, had the most crime in 2017.</p>
+<p><img src="10.png" class="img-fluid"></p>
+<p>The heat map on the <a href="https://bradleylindblad.shinyapps.io/Fargo_Crime/">interactive dashboard</a> is fun to play with to see where the hot spots were for certain crimes.</p>
+</section>
+<section id="interesting-finds" class="level2">
+<h2 class="anchored" data-anchor-id="interesting-finds">Interesting Finds</h2>
+<p>When I play with the dashboard I find a few interesting things. First of all, I notice that the peeper data was fairly concentrated in one area:</p>
+<p><img src="11.png" class="img-fluid"></p>
+<p>Is that area of Fargo immediately west of West Acres just prime peeping grounds? I don’t know. But it may indicate that there was just one or two peepers that were staying in their own neighborhoods. There were almost twice as many calls on Sunday vs.&nbsp;the rest of the week, which is a definite pattern.</p>
+<p><img src="12.png" class="img-fluid"></p>
+<p>An examination of the “Overdose- Poisoning” crime chart shows a different pattern:</p>
+<p><img src="13.png" class="img-fluid"></p>
+<p>Here we see two distinct clusters; one east of Yunker Farm and another situated downtown. If I zoom in closer on the downtown cluster, we can pinpoint the epicenter (keep in mind this is data on the block-level):</p>
+<p><img src="14.png" class="img-fluid"></p>
+<p>Seems like an area to be careful around.</p>
+</section>
+<section id="conclusions" class="level2">
+<h2 class="anchored" data-anchor-id="conclusions">Conclusions</h2>
+<p>So what did we learn? You will invariably come to different conclusions than myself when you examine the interactive dashboard, but my take was that (1) downtown = danger zone, (2) the cold definitely has a “cooling effect” (sorry) on local crime and (3), bar close isn’t a good time to be walking the dog.</p>
+</section>
+<section id="further-research" class="level2">
+<h2 class="anchored" data-anchor-id="further-research">Further Research</h2>
+<p>I toyed with the idea of building a real — time web page that showed Fargo crimes as they were happening. There is a webpage that already does something like that, but it is clumsy and slow. If there is enough interest in this analysis I’ll definitely throw the app together (shoot me an email or comment if you would like this).</p>
+<hr>
+<p><strong><em>Want more content like this?</em></strong> <a href="https://technistema.com/contact/">Subscribe here</a></p>
+
+
+</section>
+
+<script data-goatcounter="https://datalogos.goatcounter.com/count" async="" src="//gc.zgo.at/count.js"></script></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

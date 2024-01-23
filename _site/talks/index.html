@@ -73,9 +73,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-categories"],
+      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -119,16 +119,16 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../blog">
+    <a class="nav-link" href="../posts">
  <span class="menu-text"><i class="fa-solid fa-list" aria-label="list"></i> Blog</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../teaching.html">
- <span class="menu-text"><i class="fa-solid fa-chalkboard-user" aria-label="chalkboard-user"></i> Teaching</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../talks">
  <span class="menu-text"><i class="fa-solid fa-bullhorn" aria-label="bullhorn"></i> Talks</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../teaching.html">
+ <span class="menu-text"><i class="fa-solid fa-chalkboard-user" aria-label="chalkboard-user"></i> Teaching</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../writing.html">
@@ -181,7 +181,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div></div>
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(0)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(1)</span></div><div class="category" data-category="R">R <span class="quarto-category-count">(1)</span></div><div class="category" data-category="finance">finance <span class="quarto-category-count">(1)</span></div><div class="category" data-category="quarto">quarto <span class="quarto-category-count">(1)</span></div><div class="category" data-category="reporting">reporting <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
 <main class="content column-page-left" id="quarto-document-content">
 
@@ -208,7 +208,50 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="list quarto-listing-default">
+<div class="quarto-post image-right" data-index="0" data-categories="R,reporting,quarto,finance" data-listing-date-sort="1609912800000" data-listing-file-modified-sort="1705975554370" data-listing-reading-time-sort="0.31">
+<div class="thumbnail">
+<p><a href="../talks/professional-financial-reports-with-rmarkdown/index.html"> <img src="../talks/professional-financial-reports-with-rmarkdown/pro_reports.png" class="thumnail-image"> </a></p>
+</div>
+<div class="body">
+<a href="../talks/professional-financial-reports-with-rmarkdown/index.html">
+<h3 class="no-anchor listing-title">
+Professional Financial Reports with RMarkdown
+</h3>
+<div class="listing-subtitle">
 
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('R'); return false;">
+R
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('reporting'); return false;">
+reporting
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('quarto'); return false;">
+quarto
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('finance'); return false;">
+finance
+</div>
+</div>
+<a href="../talks/professional-financial-reports-with-rmarkdown/index.html">
+<div class="listing-description">
+<p>Paramaterizing for profit</p>
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="../talks/professional-financial-reports-with-rmarkdown/index.html">
+<div class="listing-date">
+Jan 6, 2021
+</div>
+<div class="listing-author">
+Brad Lindblad
+</div>
+</a>
+</div>
+</div>
 </div>
 <div class="listing-no-matching d-none">
 No matching items

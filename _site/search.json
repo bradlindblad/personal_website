@@ -1,17 +1,416 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Brad Lindblad, MBA",
+    "objectID": "posts/professional-financial-reports-with-rmarkdown/index.html",
+    "href": "posts/professional-financial-reports-with-rmarkdown/index.html",
+    "title": "Professional Financial Reports with RMarkdown",
     "section": "",
-    "text": "He is a data scientist."
+    "text": "LinkedIn | Github | Blog | Subscribe\n\nI recently gave a lightning talk at the Financial Industry R Meetup on how you can use RMarkdown to create extremely professional reports using RMarkdown and a slew of other popular R tools.\nYou can re-watch the talk on Youtube\nYou can also read the directions and overview at the Github repo.\n\nWant more content like this? Subscribe here"
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "posts/announcing-the-cheatsheet-package/index.html",
+    "href": "posts/announcing-the-cheatsheet-package/index.html",
+    "title": "Announcing the {cheatsheet} Package",
     "section": "",
-    "text": "About this site\n\n1 + 1\n\n[1] 2"
+    "text": "LinkedIn | Github | Blog | Subscribe\nPackage homepage: https://bradlindblad.github.io/cheatsheet/ Package github repo: https://github.com/bradlindblad/cheatsheet\n{cheatsheet} is a simple R package that downloads helpful R cheatsheets from the repository maintained by RStudio. You could easily just clone the repo these are hosted at and filter them how you wish; this package is just a shortcut and more useful for people who aren’t familiar with git."
+  },
+  {
+    "objectID": "posts/announcing-the-cheatsheet-package/index.html#installation",
+    "href": "posts/announcing-the-cheatsheet-package/index.html#installation",
+    "title": "Announcing the {cheatsheet} Package",
+    "section": "Installation",
+    "text": "Installation\nYou can install the released version of cheatsheet from CRAN with:\ninstall.packages(\"cheatsheet\")"
+  },
+  {
+    "objectID": "posts/announcing-the-cheatsheet-package/index.html#usage",
+    "href": "posts/announcing-the-cheatsheet-package/index.html#usage",
+    "title": "Announcing the {cheatsheet} Package",
+    "section": "Usage",
+    "text": "Usage\nThe main function here is cheatsheet::get_all_cheatsheets.\nlibrary(cheatsheet)\nlibrary(fs)\n\n# Get all cheatsheets and place in a folder on your desktop\ncheatsheet::get_all_cheatsheets(local_path = \"cheats\", tidyverse_only = FALSE)\nfs::dir_ls(\"cheats\")\n\n# 0-template.pdf\n# Machine Learning Modelling in R.pdf\n# SamplingStrata.pdf\n# base-r.pdf\n# bayesplot.pdf\n# bcea.pdf\n# caret.pdf\n# cartography.pdf\n# collapse.pdf\n# data-import.pdf\n# data-transformation.pdf\n# data-visualization-2.1.pdf\n# datatable.pdf\n# declaredesign.pdf\n# distr6.pdf\n# estimatr.pdf\n# eurostat.pdf\n# factors.pdf\n# gganimate.pdf\n# golem.pdf\n# gwasrapidd.pdf\n# h2o.pdf\n# how-big-is-your-graph.pdf\n# imputeTS.pdf\n# jfa.pdf\n# keras.pdf\n# labelled.pdf\n# leaflet.pdf\n# lubridate.pdf\n# mlr.pdf\n# mosaic.pdf\n# nardl.pdf\n# nimble.pdf\n# oSCR.pdf\n# overviewR.pdf\n# package-development.pdf\n# packagefinder.pdf\n# parallel_computation.pdf\n# plumber.pdf\n# purrr.pdf\n# quanteda.pdf\n# randomizr.pdf\n# regex.pdf\n# reticulate.pdf\n# rmarkdown-2.0.pdf\n# rphylopic.pdf\n# rstudio-ide.pdf\n# sf.pdf\n# shiny.pdf\n# shiny_Spanish_final.pdf\n# sjmisc.pdf\n# sparklyr.pdf\n# stata2r.pdf\n# strings.pdf\n# survminer.pdf\n# syntax.pdf\n# teachR.pdf\n# tidyeval.pdf\n# time-series.pdf\n# tsbox.pdf\n# vegan.pdf\n# vtree.pdf\n# xplain.pdf\n\n# Just grab core tidyverse cheatsheets\ncheatsheet::get_all_cheatsheets(local_path = \"cheats\", tidyverse_only = TRUE)\n\n# data-import.pdf            data-transformation.pdf\n# data-visualization-2.1.pdf factors.pdf\n# lubridate.pdf              purrr.pdf\n# strings.pdf                tidyeval.pdf"
+  },
+  {
+    "objectID": "posts/announcing-the-cheatsheet-package/index.html#foreign-language-support",
+    "href": "posts/announcing-the-cheatsheet-package/index.html#foreign-language-support",
+    "title": "Announcing the {cheatsheet} Package",
+    "section": "Foreign language support",
+    "text": "Foreign language support\n{cheatsheet} also lets you download cheatsheets that have been translated to over a dozen languages. Check which languages are available with this command:\n\ncheatsheet::list_languages()\n\n\n\n\n── Languages available for get_translation() ───────────────────────────────────\n\n\n• chinese\n\n\n• dutch\n\n\n• french\n\n\n• german\n\n\n• greek\n\n\n• italian\n\n\n• japanese\n\n\n• korean\n\n\n• portuguese\n\n\n• russian\n\n\n• spanish\n\n\n• turkish\n\n\n• ukranian\n\n\n• uzbek\n\n\n• vietnamese\n\n\n\n\n\n── Pass the language you choose above to get_translation(), like: \n\n\nget_translation('~/Desktop/french', 'french')\n\n\nThen, pass the language you want to this function:\n\ncheatsheet::get_translation(local_path = \"cheats\", language = \"german\")\n\n# base-r_de.pdf\n# data-transformation-cheatsheet_de.pdf\n# data-wrangling-german.pdf\n# devtools-german.pdf\n# ggplot2-german.pdf\n# rmarkdown-cheatsheet-2.0-german.pdf\n# shiny-german.pdf\n# sparklyr-cheatsheet_de.pdf\n\nIf anyone has another known and established stash of cheatsheets that would be helpful for this package, please submit an issue or pull request.\n\nWant more content like this? Subscribe here"
+  },
+  {
+    "objectID": "posts/python-text-analysis-with-the-schrutepy-package/index.html",
+    "href": "posts/python-text-analysis-with-the-schrutepy-package/index.html",
+    "title": "Python Text Analysis With the Schrutepy Package",
+    "section": "",
+    "text": "LinkedIn | Github | Blog | Subscribe\nFollowing the success of the {schrute} R package, many requests came in for the same dataset ported over to Python. The schrute and schrutepy packages serve one purpose only: to load the entire transcripts from The Office, so you can perform NLP, text analysis or whatever with this fun dataset."
+  },
+  {
+    "objectID": "posts/python-text-analysis-with-the-schrutepy-package/index.html#quick-start",
+    "href": "posts/python-text-analysis-with-the-schrutepy-package/index.html#quick-start",
+    "title": "Python Text Analysis With the Schrutepy Package",
+    "section": "Quick start",
+    "text": "Quick start\nInstall the package with pip:\npip install schrutepy\nThen import the dataset into a dataframe:\nfrom schrutepy import schrutepy\n\ndf = schrutepy.load_schrute()\nThat’s it. Now you’re ready."
+  },
+  {
+    "objectID": "posts/python-text-analysis-with-the-schrutepy-package/index.html#long-example",
+    "href": "posts/python-text-analysis-with-the-schrutepy-package/index.html#long-example",
+    "title": "Python Text Analysis With the Schrutepy Package",
+    "section": "Long example",
+    "text": "Long example\nNow we’ll quickly work through some common elementary text analysis functions.\nfrom schrutepy import schrutepy\nfrom wordcloud import WordCloud, STOPWORDS, ImageColorGenerator\nimport matplotlib.pyplot as plt\nfrom matplotlib.pyplot import figure\nimport nltk\nfrom nltk.corpus import stopwords\nfrom PIL import Image\nimport numpy as np\nimport collections\nimport pandas as pd\nLoad the entire transcript with the load_schrute function\ndf = schrutepy.load_schrute()\nInspect the data\ndf.head()\n\n\n\n\n\n\n\n\n\n\n\n\nindex\n\n\n\n\nseason\n\n\n\n\nepisode\n\n\n\n\nepisode_name\n\n\n\n\ndirector\n\n\n\n\nwriter\n\n\n\n\ncharacter\n\n\n\n\ntext\n\n\n\n\ntext_w_direction\n\n\n\n\n\n\n\n\n0\n\n\n\n\n1\n\n\n\n\n1\n\n\n\n\n1\n\n\n\n\nPilot\n\n\n\n\nKen Kwapis\n\n\n\n\nRicky Gervais;Stephen Merchant;Greg Daniels\n\n\n\n\nMichael\n\n\n\n\nAll right Jim. Your quarterlies look very good…\n\n\n\n\nAll right Jim. Your quarterlies look very good…\n\n\n\n\n\n\n1\n\n\n\n\n2\n\n\n\n\n1\n\n\n\n\n1\n\n\n\n\nPilot\n\n\n\n\nKen Kwapis\n\n\n\n\nRicky Gervais;Stephen Merchant;Greg Daniels\n\n\n\n\nJim\n\n\n\n\nOh, I told you. I couldnt close it. So…\n\n\n\n\nOh, I told you. I couldnt close it. So…\n\n\n\n\n\n\n2\n\n\n\n\n3\n\n\n\n\n1\n\n\n\n\n1\n\n\n\n\nPilot\n\n\n\n\nKen Kwapis\n\n\n\n\nRicky Gervais;Stephen Merchant;Greg Daniels\n\n\n\n\nMichael\n\n\n\n\nSo youve come to the master for guidance? Is …\n\n\n\n\nSo youve come to the master for guidance? Is …\n\n\n\n\n\n\n3\n\n\n\n\n4\n\n\n\n\n1\n\n\n\n\n1\n\n\n\n\nPilot\n\n\n\n\nKen Kwapis\n\n\n\n\nRicky Gervais;Stephen Merchant;Greg Daniels\n\n\n\n\nJim\n\n\n\n\nActually, you called me in here, but yeah.\n\n\n\n\nActually, you called me in here, but yeah.\n\n\n\n\n\n\n4\n\n\n\n\n5\n\n\n\n\n1\n\n\n\n\n1\n\n\n\n\nPilot\n\n\n\n\nKen Kwapis\n\n\n\n\nRicky Gervais;Stephen Merchant;Greg Daniels\n\n\n\n\nMichael\n\n\n\n\nAll right. Well, let me show you how its done.\n\n\n\n\nAll right. Well, let me show you how its done.\n\n\n\n\n\n\n\nSome of the records don’t contain dialogue\ndf = df.dropna()\nCreate a wordcloud of all the text in the entire series\ntext = \" \".join(review for review in df.text)\nprint (\"There are {} words in the combination of all review.\".format(len(text)))\nThere are 3001517 words in the combination of all review.\n# Create stopword list:\nnltk.download('stopwords')\nstopWords = set(stopwords.words('english'))\n\n# Generate a word cloud image\nwordcloud = WordCloud(stopwords=stopWords, background_color=\"white\").generate(text)\n\n# Display the generated image:\n# the matplotlib way:\nplt.figure(figsize=[30,15])\nplt.imshow(wordcloud, interpolation='bilinear')\nplt.axis(\"off\")\nplt.show()\n[nltk_data] Downloading package stopwords to /home/xps/nltk_data...\n[nltk_data]   Package stopwords is already up-to-date!\n\nLet’s do this same thing for a few of the characters. Might as well make a function at this point…\ndef plotDunder(character, df):\n    mydf = df[df.character == character]\n    text1 = \" \".join(review for review in mydf.text)\n    # Generate a word cloud image\n    wordcloud = WordCloud(stopwords=stopWords, background_color=\"white\").generate(text1)\n\n    # Display the generated image:\n    # the matplotlib way:\n    plt.figure(figsize=[15,7])\n    plt.imshow(wordcloud, interpolation='bilinear')\n    plt.title(character)\n    plt.axis(\"off\")\n    plt.show()\n    \nfav = [\"Michael\", \"David Wallace\", \"Dwight\", \"Jim\", \"Pam\", \"Oscar\", \"Phyllis\", \"Creed\", \"Ryan\",]\nfor i in fav:\n    plotDunder(i, df)\n\n\n\n\n\n\n\n\n\nLet’s make on in the shape of Dwight’s large head\ndwight_mask = np.array(Image.open(\"schrutepy.png\"))\n# Create a word cloud image\nwc = WordCloud(background_color=\"white\", max_words=1000, mask=dwight_mask,\n               stopwords=stopWords, contour_width=1, contour_color='grey')\n\n# Generate a wordcloud\nwc.generate(text)\n\n\n# show\nplt.figure(figsize=[30,15])\nplt.imshow(wc, interpolation='bilinear')\nplt.axis(\"off\")\nplt.show()\n\n\nwc.to_file(\"final_schrute.png\")\n\n<wordcloud.wordcloud.WordCloud at 0x7fa1036a8b00>\nNow let’s find and plot the most common word spoken by my favorite characters\ndef commonWord(character, df):\n    mydf = df[df.character == character]\n    text = \" \".join(review for review in mydf.text)\n    wordcount = {}\n    # To eliminate duplicates, remember to split by punctuation, and use case demiliters.\n    for word in text.lower().split():\n        word = word.replace(\".\",\"\")\n        word = word.replace(\",\",\"\")\n        word = word.replace(\":\",\"\")\n        word = word.replace(\"\\\"\",\"\")\n        word = word.replace(\"!\",\"\")\n        word = word.replace(\"â€œ\",\"\")\n        word = word.replace(\"â€˜\",\"\")\n        word = word.replace(\"*\",\"\")\n        if word not in stopWords:\n            if word not in wordcount:\n                wordcount[word] = 1\n            else:\n                wordcount[word] += 1\n\n    # Print most common word\n    n_print = int(10)\n#     print(\"\\nOK. The {} most common words are as follows\\n\".format(n_print))\n    word_counter = collections.Counter(wordcount)\n    for word, count in word_counter.most_common(n_print):\n        pass\n    # Close the file\n    # Draw a bar chart\n    lst = word_counter.most_common(n_print)\n    df = pd.DataFrame(lst, columns = ['Word', 'Count'])\n    df.plot.bar(x='Word',y='Count', title=character)\nfor i in fav:\n    commonWord(i, df)\n\n\n\n\n\n\n\n\n\n\nStar this repo on Github?\n\n\n\nGitHub stars\n\n\n\nWant more content like this? Subscribe here"
+  },
+  {
+    "objectID": "posts/proverbs-esv-support/index.html",
+    "href": "posts/proverbs-esv-support/index.html",
+    "title": "proverbs Now Has Support for ESV Translation",
+    "section": "",
+    "text": "LinkedIn | Github | Blog | Subscribe\n\nThe proverbs R package now has support for the incredibly popular ESV Bible translation. View your daily proverb in this fluent and literal translation from the comfort of your R session.\nYou do have to grab a free API key from the ESV folks in order to integrate the translation, but it will take you < 5 minutes to set this up.\nFor a detailed walkthrough - see this vignette."
+  },
+  {
+    "objectID": "posts/using-r-to-analyze-fargo-crime-data/index.html",
+    "href": "posts/using-r-to-analyze-fargo-crime-data/index.html",
+    "title": "Using R to Analyze Fargo Crime Data",
+    "section": "",
+    "text": "By: Brad Lindblad\nLinkedIn | Github | Blog | Subscribe\ntl;dr: If you are impatient and want to go straight to the fun stuff, here is a link to the interactive web dashboard that I built to supplement this analysis. Best viewed on desktop PC.\nOn a recent Monday afternoon that I would normally have spent slumped over my desk gingerly pecking out bits of code, I stumbled across an article about my home town that made me do a double-take. “Fargo violent crime tops U.S. national average for the first time.” The article details how the once sleepy farming community nestled in a fertile and flat ancient lake bed had surpassed the national violent crime rate.\nI’m a new father so I wasn’t a little bit alarmed at these claims, so I did what any data scientist would do in that situation, I hunted down some data to learn more. Fortunately, the Fargo Police Department publishes their dispatch logs which detail all of the calls that are made to police. There is also a handy map application that helps visualize where the “danger zones” are in two dimensions. But, I wanted to know more. So I formulated a set of questions that I’ll answer below using the dispatch data from 2017."
+  },
+  {
+    "objectID": "posts/using-r-to-analyze-fargo-crime-data/index.html#problem-statements",
+    "href": "posts/using-r-to-analyze-fargo-crime-data/index.html#problem-statements",
+    "title": "Using R to Analyze Fargo Crime Data",
+    "section": "Problem Statements",
+    "text": "Problem Statements\n\nQuestion 1: Which month has the most crime?\nQuestion 2: Which weekday has the most crime?\nQuestion 3: What time of day has the most crime?\nQuestion 4: Where are crimes committed?\n\nBut first, let’s get the assumptions and methods out of the way."
+  },
+  {
+    "objectID": "posts/using-r-to-analyze-fargo-crime-data/index.html#assumptions",
+    "href": "posts/using-r-to-analyze-fargo-crime-data/index.html#assumptions",
+    "title": "Using R to Analyze Fargo Crime Data",
+    "section": "Assumptions",
+    "text": "Assumptions\n\n\nOf the categories of crime in the dispatch logs, we will be looking at the calls that are actually crimes, for example, we will ignore parking complaints, chest pain and the like.\n\n\nEach call incident is reported at the block level, meaning our maps will be accurate to the block, not to the house or address.\n\n\nFor brevity, I will be using the word “crime” as a substitute for “dispatch calls,” with the assumption that dispatch calls are generally indicative of crime."
+  },
+  {
+    "objectID": "posts/using-r-to-analyze-fargo-crime-data/index.html#methods",
+    "href": "posts/using-r-to-analyze-fargo-crime-data/index.html#methods",
+    "title": "Using R to Analyze Fargo Crime Data",
+    "section": "Methods",
+    "text": "Methods\nThe R computing language was used to perform these analyses. The complete source code can be found at this Github repository."
+  },
+  {
+    "objectID": "posts/using-r-to-analyze-fargo-crime-data/index.html#which-month-has-the-most-crime",
+    "href": "posts/using-r-to-analyze-fargo-crime-data/index.html#which-month-has-the-most-crime",
+    "title": "Using R to Analyze Fargo Crime Data",
+    "section": "Which month has the most crime?",
+    "text": "Which month has the most crime?\nFargo gets both hot and cold weather, but the hamlet is better known for the latter in popular culture, (thanks, Coen Brothers/FX!). Cripes, when you do an image search for Fargo, all you get are posters for the 1996 film and a bloodied Steve Buscemi:\n\nPeople in Northern climates know that “cabin fever” is a real thing, although not as extreme as Jack Nicholson’s interpretation in The Shining. My point is that crime is simply more difficult when you have to scrape the windshield and warm up the engine of a vehicle before boosting it.\nBefore I looked at the data, I assumed that crime would be sparse in the cold months, which can start as early as October and lead into May.\n\nThe chart above is known as a calendar heat map. It shows the crime frequency by month as well as day of week. The cooler (purple) colors indicate low crime levels, and the warmer (yellow) colors indicate high crime levels. As I suspected, November through February were relatively tame months compared to the bacchanals of June and September.\n\nAhh, now this bar chart makes it more clear. It seems that the frosty months starting in January leading up to May are a metaphorical ramp to the depraved summer months, with June being the pinnacle of this debauchery."
+  },
+  {
+    "objectID": "posts/using-r-to-analyze-fargo-crime-data/index.html#which-weekday-has-the-most-crime",
+    "href": "posts/using-r-to-analyze-fargo-crime-data/index.html#which-weekday-has-the-most-crime",
+    "title": "Using R to Analyze Fargo Crime Data",
+    "section": "Which weekday has the most crime?",
+    "text": "Which weekday has the most crime?\nI think a bar chart will do the trick for this question as well.\n\nWell this makes sense. As folks get busy in their work week, they have less time for being #savage than on the weekend. I’m curious, are certain crimes more common on different days of the week? For that, I’ll pull some screenshots from the interactive dashboard:"
+  },
+  {
+    "objectID": "posts/using-r-to-analyze-fargo-crime-data/index.html#impaired-driver",
+    "href": "posts/using-r-to-analyze-fargo-crime-data/index.html#impaired-driver",
+    "title": "Using R to Analyze Fargo Crime Data",
+    "section": "Impaired Driver",
+    "text": "Impaired Driver\n\nPeople party more on the weekend; pretty obvious."
+  },
+  {
+    "objectID": "posts/using-r-to-analyze-fargo-crime-data/index.html#harassment",
+    "href": "posts/using-r-to-analyze-fargo-crime-data/index.html#harassment",
+    "title": "Using R to Analyze Fargo Crime Data",
+    "section": "Harassment",
+    "text": "Harassment\n\nLooking at the dispatch logs, it seems like many of the calls are in response to phone harassment, like scammers. Apparently Monday is their big day at the scammer offices."
+  },
+  {
+    "objectID": "posts/using-r-to-analyze-fargo-crime-data/index.html#what-time-of-day-has-the-most-crime",
+    "href": "posts/using-r-to-analyze-fargo-crime-data/index.html#what-time-of-day-has-the-most-crime",
+    "title": "Using R to Analyze Fargo Crime Data",
+    "section": "What time of day has the most crime?",
+    "text": "What time of day has the most crime?\n\nI didn’t expect to see these results. Apparently, crime drops off around midnight, before picking back up again around bar close at two AM. For simplicity, I grouped the different offence types by three subcategories."
+  },
+  {
+    "objectID": "posts/using-r-to-analyze-fargo-crime-data/index.html#where-are-crimes-committed",
+    "href": "posts/using-r-to-analyze-fargo-crime-data/index.html#where-are-crimes-committed",
+    "title": "Using R to Analyze Fargo Crime Data",
+    "section": "Where are crimes committed?",
+    "text": "Where are crimes committed?\n\nIn general, there is crime all over the city. The downtown area, however, had the most crime in 2017.\n\nThe heat map on the interactive dashboard is fun to play with to see where the hot spots were for certain crimes."
+  },
+  {
+    "objectID": "posts/using-r-to-analyze-fargo-crime-data/index.html#interesting-finds",
+    "href": "posts/using-r-to-analyze-fargo-crime-data/index.html#interesting-finds",
+    "title": "Using R to Analyze Fargo Crime Data",
+    "section": "Interesting Finds",
+    "text": "Interesting Finds\nWhen I play with the dashboard I find a few interesting things. First of all, I notice that the peeper data was fairly concentrated in one area:\n\nIs that area of Fargo immediately west of West Acres just prime peeping grounds? I don’t know. But it may indicate that there was just one or two peepers that were staying in their own neighborhoods. There were almost twice as many calls on Sunday vs. the rest of the week, which is a definite pattern.\n\nAn examination of the “Overdose- Poisoning” crime chart shows a different pattern:\n\nHere we see two distinct clusters; one east of Yunker Farm and another situated downtown. If I zoom in closer on the downtown cluster, we can pinpoint the epicenter (keep in mind this is data on the block-level):\n\nSeems like an area to be careful around."
+  },
+  {
+    "objectID": "posts/using-r-to-analyze-fargo-crime-data/index.html#conclusions",
+    "href": "posts/using-r-to-analyze-fargo-crime-data/index.html#conclusions",
+    "title": "Using R to Analyze Fargo Crime Data",
+    "section": "Conclusions",
+    "text": "Conclusions\nSo what did we learn? You will invariably come to different conclusions than myself when you examine the interactive dashboard, but my take was that (1) downtown = danger zone, (2) the cold definitely has a “cooling effect” (sorry) on local crime and (3), bar close isn’t a good time to be walking the dog."
+  },
+  {
+    "objectID": "posts/using-r-to-analyze-fargo-crime-data/index.html#further-research",
+    "href": "posts/using-r-to-analyze-fargo-crime-data/index.html#further-research",
+    "title": "Using R to Analyze Fargo Crime Data",
+    "section": "Further Research",
+    "text": "Further Research\nI toyed with the idea of building a real — time web page that showed Fargo crimes as they were happening. There is a webpage that already does something like that, but it is clumsy and slow. If there is enough interest in this analysis I’ll definitely throw the app together (shoot me an email or comment if you would like this).\n\nWant more content like this? Subscribe here"
+  },
+  {
+    "objectID": "posts/using-github-action-python-telegram-meat/index.html",
+    "href": "posts/using-github-action-python-telegram-meat/index.html",
+    "title": "Using Github Actions, Python and Telegram to Get Ribeye Specials",
+    "section": "",
+    "text": "LinkedIn | Github | Blog | Subscribe\nI buy red meat - mostly steaks - at a local butcher shop. With the insane inflation in the price of meat recently, I’ve been really drawn to their weekly specials. I’ll typically buy a few hundred dollars worth whenever one of my favorite cuts like ribeye or New York strip steak is at a reasonable price.\nMy local butcher shop updates their weekly specials on Monday or Tuesday of each week. I was going out to their website manually and checking the specials, but since I’m a data scientist who specializes in web scraping, I couldn’t NOT automate that little task."
+  },
+  {
+    "objectID": "posts/using-github-action-python-telegram-meat/index.html#solution",
+    "href": "posts/using-github-action-python-telegram-meat/index.html#solution",
+    "title": "Using Github Actions, Python and Telegram to Get Ribeye Specials",
+    "section": "Solution",
+    "text": "Solution\nI began by making a small python app that I would run from the command line whenever I felt like checking. But, I learned that some guys were making simple Telegram bots to interact with APIs and such, so l checked that out and it seemed simple enough to program.\nI decided on the following simple architecture: \nNow, onto building the first part: the python script to scrape the website."
+  },
+  {
+    "objectID": "posts/using-github-action-python-telegram-meat/index.html#building-it---python",
+    "href": "posts/using-github-action-python-telegram-meat/index.html#building-it---python",
+    "title": "Using Github Actions, Python and Telegram to Get Ribeye Specials",
+    "section": "Building it - python",
+    "text": "Building it - python\nFirst, let’s build a simple scraping script with the BeautifulSoup library. Make sure you init a Github repo at this point as well because we’ll need that to use Github actions.\nfrom bs4 import BeautifulSoup as bs\nfrom decouple import config\nimport requests\nimport sys\nimport telepot\nWe’ll use decouple to handle the repository secrets in the Github action, and telepot will work with the Telegram API for us.\nNext, we’ll use the decouple config function to grab the Telegram user ID and API token\nMY_ID = config(\"MY_ID\")\nAPI_KEY = config(\"API_KEY\")\nAfter that, we’ll write two functions: one to scrape the website (it’s kind of messy, hence the garbage code), and the other to send the resulting string to our Telegram bot\ndef getSpecials():\n  URL = \"http://www.meatsbyjohnandwayne.com/weeklyspecials.html\"\n\n  response = requests.get(URL)\n\n  html = response.content\n  soup = bs(html, \"lxml\")\n\n  answer = (\n    soup.find(\"td\")\n    .text.replace(\"\\n\", \"\")\n    .replace(\"\\xa0\", \"\")\n    .replace(\n      \"(function(d, s, id) {\\r  var js, fjs = d.getElementsByTagName(s)[0];\\r  if (d.getElementById(id))        return;\\r  js = d.createElement(s); js.id = id;\\r  js.src =         \\\"//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5\\\";\\r  fjs.parentNode.insertBefore(js, fjs);\\r}(document, 'script', 'facebook-jssdk'));\",\n    \"\",\n    )\n  )\n\n  return answer\n\n\ndef send_telegram_message(msg):\n\n  bot = telepot.Bot(API_KEY)\n  bot.getMe()\n  bot.sendMessage(MY_ID, msg)\nFinally, we’ll run the whole thing\nif __name__ == \"__main__\":\n\n    # Get the specials\n    meats = getSpecials()\n\n    send_telegram_message(meats)\nIf we run it, we get something like this:\nSpecials for the WeekMONDAY-SATURDAY1/31/22-2/5/22USDA \nCHOICENEW YORK STRIPSTEAK$9.99/LB \nTORTILLA CRUSTEDHOT PEPPER CHEESE STUFFED CHICKEN BREAST$6.99/LB\nOUR OWNSMOKED HUNTERSRING SAUSAGE$3.99/LB \nwhich is really a big run-on sentence. You could easily parse this to make it prettier but I can read it fine so I moved on.\nI use pipenv for dependencies and you can see that detail in the repo if you’re interested. Full python code at the end as well as at the repo."
+  },
+  {
+    "objectID": "posts/using-github-action-python-telegram-meat/index.html#building-it---github-actions",
+    "href": "posts/using-github-action-python-telegram-meat/index.html#building-it---github-actions",
+    "title": "Using Github Actions, Python and Telegram to Get Ribeye Specials",
+    "section": "Building it - Github actions",
+    "text": "Building it - Github actions\nNow that we have a working script, we’ll set up the Github action to run our scraping script for us with this yaml file, .github.workflows/send_meat_via_telegram.yaml\nname: meat_telegram\n\n# Controls when the action will run.\non:\n  # Action can be manually started\n  workflow_dispatch:\n  # job runs on Mon and Tues mornings\n  schedule:\n    - cron: '0 15 * * 1'\n    - cron: '0 13 * * 2'\n\njobs:\n\n  build:\n    name: Build\n    runs-on: ubuntu-latest\n    steps:\n      - name: Check out this repository\n        uses: actions/checkout@v2\n\n      - name: Set up Python\n        uses: actions/setup-python@v2\n        with:\n          python-version: '3.8'\n\n      - name: Install pipenv\n        run: pip install pipenv\n\n      - name: Install deps\n        run: pipenv install\n\n        # Run the Python script\n      - name: Run Python script\n        run: pipenv run python main.py\n        env:\n          API_KEY: ${{ secrets.API_KEY }}\n          MY_ID: ${{ secrets.MY_ID }}\nAgain, check out the repo for more details on where to place this script, but it is very simple: it checks out the current repo (and our python script from above), it sets up pipenv and runs the python scraping script using my two secrets. There is a cron statement up top to run this Monday and Tuesday morning (when I usually buy meat for the week).\nHold on for now with the secrets on the last two lines, we need to get them from Telegram quick."
+  },
+  {
+    "objectID": "posts/using-github-action-python-telegram-meat/index.html#building-it---telegram",
+    "href": "posts/using-github-action-python-telegram-meat/index.html#building-it---telegram",
+    "title": "Using Github Actions, Python and Telegram to Get Ribeye Specials",
+    "section": "Building it - Telegram",
+    "text": "Building it - Telegram\nWe need to do a few things to get up and running with our Telegram bot. First, search for “@BotFather” user. This is a bot maintained by Telegram to set up other bots. Follow the instructions therein to create a bot, and save the API key that he will give you.\n\nNext, you need to find your unique chat ID. Search for Telegram bot “@username_to_id_bot”, and it should show you your ID. Save that.\nNow that we have our API key and chat ID, we need to add those to our Github repo as repository secrets. I could explain how to do that but Github does a better job than I ever could. Remember to add your Telegram API key as “API_KEY” and your chat ID as “MY_ID” to coincide with our python script and Github action yaml file."
+  },
+  {
+    "objectID": "posts/using-github-action-python-telegram-meat/index.html#wrap-up",
+    "href": "posts/using-github-action-python-telegram-meat/index.html#wrap-up",
+    "title": "Using Github Actions, Python and Telegram to Get Ribeye Specials",
+    "section": "Wrap up",
+    "text": "Wrap up\nThat’s it. Now this bot will send a notification to my (or your) Telegram account on a regular basis with the best meat specials in town. Use this repo as an example to extend python, github actions and telegram to solve your own problems and hammer your own nails."
+  },
+  {
+    "objectID": "posts/using-github-action-python-telegram-meat/index.html#appendix",
+    "href": "posts/using-github-action-python-telegram-meat/index.html#appendix",
+    "title": "Using Github Actions, Python and Telegram to Get Ribeye Specials",
+    "section": "Appendix",
+    "text": "Appendix\nAll of this code can be found at the repo: https://github.com/bradlindblad/meatbot\n\nmain.py\nfrom bs4 import BeautifulSoup as bs\nfrom decouple import config\nimport requests\nimport sys\nimport telepot\n\n\nMY_ID = config(\"MY_ID\")\nAPI_KEY = config(\"API_KEY\")\n\ndef getSpecials():\n    URL = \"http://www.meatsbyjohnandwayne.com/weeklyspecials.html\"\n\n    response = requests.get(URL)\n\n    html = response.content\n    soup = bs(html, \"lxml\")\n\n    answer = (\n        soup.find(\"td\")\n        .text.replace(\"\\n\", \"\")\n        .replace(\"\\xa0\", \"\")\n        .replace(\n            \"(function(d, s, id) {\\r  var js, fjs = d.getElementsByTagName(s)[0];\\r  if (d.getElementById(id)) return;\\r  js = d.createElement(s); js.id = id;\\r  js.src = \\\"//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5\\\";\\r  fjs.parentNode.insertBefore(js, fjs);\\r}(document, 'script', 'facebook-jssdk'));\",\n            \"\",\n        )\n    )\n\n    return answer\n\n\ndef send_telegram_message(msg):\n\n    bot = telepot.Bot(API_KEY)\n    bot.getMe()\n    bot.sendMessage(MY_ID, msg)\n\n\nif __name__ == \"__main__\":\n\n    # Get the specials\n    meats = getSpecials()\n\n    send_telegram_message(meats)\n\n\nsend_meat_via_telegram.yaml\n\nname: meat_telegram\n\n# Controls when the action will run.\non:\n  # Action can be manually started\n  workflow_dispatch:\n  # job runs on Mon and Tues mornings \n  schedule:\n    - cron: '0 15 * * 1'\n    - cron: '0 13 * * 2'\n\njobs:\n\n  build:\n    name: Build\n    runs-on: ubuntu-latest\n    steps:\n      - name: Check out this repository\n        uses: actions/checkout@v2\n\n      - name: Set up Python\n        uses: actions/setup-python@v2\n        with:\n          python-version: '3.8'\n      \n      - name: Install pipenv\n        run: pip install pipenv\n\n      - name: Install deps\n        run: pipenv install\n\n        # Run the Python script\n      - name: Run Python script\n        run: pipenv run python main.py\n        env: \n          API_KEY: ${{ secrets.API_KEY }}\n          MY_ID: ${{ secrets.MY_ID }}\n\n\nDirectory structure\n.\n├── .gitattributes\n├── .github\n│   └── workflows\n│       └── send_meat_via_telegram.yml\n├── main.py\n├── Pipfile\n├── Pipfile.lock\n└── README.md\n\nWant more content like this? Subscribe here"
+  },
+  {
+    "objectID": "posts/announcing-tidyusda-a-package-for-working-with-usda-data/index.html",
+    "href": "posts/announcing-tidyusda-a-package-for-working-with-usda-data/index.html",
+    "title": "Announcing tidyUSDA: A Package for working with USDA Data",
+    "section": "",
+    "text": "LinkedIn | Github | Blog | Subscribe\nI’m proud to announce the release of an R package that has cured one of my own personal itches: pulling and working with USDA data, specifically Quick Stats data from NASS. tidyUSDA is a minimal package for doing just that. The following is cut out from the package vignette, which you can find here: https://bradlindblad.github.io/tidyUSDA"
+  },
+  {
+    "objectID": "posts/announcing-tidyusda-a-package-for-working-with-usda-data/index.html#why-tidyusda",
+    "href": "posts/announcing-tidyusda-a-package-for-working-with-usda-data/index.html#why-tidyusda",
+    "title": "Announcing tidyUSDA: A Package for working with USDA Data",
+    "section": "Why tidyUSDA?",
+    "text": "Why tidyUSDA?\nWhy do we need yet another “tidy” package? Why do I have to install so many geospatial dependencies?\nValid questions. If you work with USDA data, you know that it is difficult at times to find what you need, when you need it. The sheer amount of data (the 2017 Census of Agriculture included some 6.4 million points of information [1]) should be a credit to the USDA, as that is a huge organizational task.\nCurrently, the best way to pull data from previous Censuses of Agriculture and Agriculture Surveys is through the Quick Stats web portal, which allows you to apply filters in an interactive gui and then download CSV files. This works great for most applications, but R programmers hate having to pull data non-programmatically, which is where tidyUSDA comes in.\nProgrammatic data pulls directly from Quick Stats At its core, tidyUSDA is an API for the Quick Stats data, allowing you to pull that same data into a dataframe in your R session.\nGeospatial capabilities tidyUSDA also gives you the option to automatically add a simple features column to the Quick Stats data, either at a county or national level. This allows you to quickly visualize Quick Stats data for fast iterations or report generation."
+  },
+  {
+    "objectID": "posts/announcing-tidyusda-a-package-for-working-with-usda-data/index.html#quick-start",
+    "href": "posts/announcing-tidyusda-a-package-for-working-with-usda-data/index.html#quick-start",
+    "title": "Announcing tidyUSDA: A Package for working with USDA Data",
+    "section": "Quick start",
+    "text": "Quick start\nFirst, install tidyUSDA with the instructions in the README section. Note that you may have to upgrade your R version if you are on an older build.\nNext, call tidyUSDA to make sure everything is installed correctly.\n\nlibrary(tidyUSDA)\n\nThe USDA controls access to their data with API keys. You can quickly obtain your free API key by following the brief instructions at this link.\nLet’s pull some data now.\n\n# Use keyring to store your api key\n# key <- keyring::key_get(\"tidyusda\")\n\n# Or hard code that thing\nkey <- '7CE0AFAD-EF7B-3761-8B8C-6AF474D6EF71'  # please get your own key!\n\nAt this point, it’s best to use the actual Quick Stats website to pick out the parameters you would like to filter by. This way you know for sure that data will be returned. I want to see a state-level breakdown of counts of operations using the 2017 census data.\nAt this point it helps to see which possible values you can input into the function parameters. You can view these possible inputs for all of the parameters with the built-in datasets. Let’s check a few out.\n\ntidyUSDA::allCategory %>% head()\n\n            statisticcat_desc1             statisticcat_desc2 \n               \"ACCESSIBILITY\"    \"ACCESSIBILITY, 5 YEAR AVG\" \n            statisticcat_desc3             statisticcat_desc4 \n\"ACCESSIBILITY, PREVIOUS YEAR\"                  \"ACTIVE GINS\" \n            statisticcat_desc5             statisticcat_desc6 \n                    \"ACTIVITY\"         \"ACTIVITY, 5 YEAR AVG\" \n\n\nSo it looks like there are only six possible input values for the category field. Good to know.\n\ntidyUSDA::allGeogLevel %>% head()\n\n              agg_level_desc1               agg_level_desc2 \n      \"AGRICULTURAL DISTRICT\" \"AMERICAN INDIAN RESERVATION\" \n              agg_level_desc3               agg_level_desc4 \n                     \"COUNTY\"               \"INTERNATIONAL\" \n              agg_level_desc5               agg_level_desc6 \n                   \"NATIONAL\"        \"REGION : MULTI-STATE\" \n\n\nThere are many different geography levels. Currently there is only support for providing geometries for county and state values.\nNow that we’re a little more clear on what we can input, let’s use our main function for data pulling.\n\n# Get count of operations with sales in 2017\nops.with.sales <- tidyUSDA::getQuickstat(\n  sector=NULL,\n  group=NULL,\n  commodity=NULL,\n  category=NULL,\n  domain='TOTAL',\n  county=NULL,\n  key = key,\n  program = 'CENSUS',\n  data_item = 'CROP TOTALS - OPERATIONS WITH SALES',\n  geographic_level = 'STATE',\n  year = '2017',\n  state = NULL,\n  geometry = TRUE,\n  lower48 = TRUE)\n\nNote that I set geometry = TRUE in order to include the geometry feature that we need for plotting, and that I set lower48 = TRUE in order to exclude Hawaii and Alaska.\nAt this point, I have a dataframe with a rather verbose number of data fields. If you set geometry = TRUE, you will have even more columns. The main data point from Quick Stats will be in the ‘Value’ field. Feel free to filter the data frame for the fields you actually need at this point.\nNow let’s see what the data looks like with a basic choropleth map.\n\n# Plot this data for each state\ntidyUSDA::plotUSDA(df = ops.with.sales)\n\n\n\n\nNote: it is a known issue that the RStudio graphics device on Mac Os X can be extremely laggy when plotting. To get around this, feel free to use your own plotting methods such as the tmap package or leaflet.\nOK wow so it looks like all the farms in the country are in California. But wait a second, California is huge as far as landmass, and the relative size of the farms are smaller on balance, so maybe we should look at this a different way. First let’s clean up the dataframe so it’s easier to work with.\n\nmydata <- ops.with.sales[,c(\"NAME\", \"Value\", \"ALAND\")]\n\nWe select the name of the state, the value from our Quick Stat query (number of ops) and ‘ALAND’, which is the land area in square meters. Let’s modify our dataframe to calculate the number of operations per square meter, so the size of the state doesn’t affect what we’re trying to derive.\n\nmydata$ALAND <- as.numeric(mydata$ALAND)\nmydata$modified_value <- mydata$Value / mydata$ALAND\n\nThis gives us a bunch of really small numbers that don’t make sense, but for our purposes of mapping, they’ll do.\n\ntidyUSDA::plotUSDA(df = mydata, fill_by = 'modified_value')\n\n\n\n\nAhh, much better. Now we have a true plot showing the number of operations per square meter. Looks like California still has the most farms per dirt clod than any other state."
+  },
+  {
+    "objectID": "posts/announcing-tidyusda-a-package-for-working-with-usda-data/index.html#taking-it-further",
+    "href": "posts/announcing-tidyusda-a-package-for-working-with-usda-data/index.html#taking-it-further",
+    "title": "Announcing tidyUSDA: A Package for working with USDA Data",
+    "section": "Taking it further",
+    "text": "Taking it further\nThis package was designed for data analysts and scientists, meaning that the output of getQuickstat is particularly verbose, rather than cherry-picked, giving the user extra data that may be useful. If you do intend to plot the data that you pull down with getQuickstat, don’t feel like you need to use plotUSDA to visualize the results; you can use any method you’d like to plot the simple features geometry."
+  },
+  {
+    "objectID": "posts/announcing-tidyusda-a-package-for-working-with-usda-data/index.html#how-you-can-contribute",
+    "href": "posts/announcing-tidyusda-a-package-for-working-with-usda-data/index.html#how-you-can-contribute",
+    "title": "Announcing tidyUSDA: A Package for working with USDA Data",
+    "section": "How you can contribute",
+    "text": "How you can contribute\nYou can report a bug or request new features at https://github.com/bradlindblad/tidyUSDA/issues.\n\nWant more content like this? Subscribe here"
+  },
+  {
+    "objectID": "posts/announcing-tidyusda-a-package-for-working-with-usda-data/index.html#references",
+    "href": "posts/announcing-tidyusda-a-package-for-working-with-usda-data/index.html#references",
+    "title": "Announcing tidyUSDA: A Package for working with USDA Data",
+    "section": "References",
+    "text": "References\n[1] (https://www.usda.gov/media/press-releases/2019/04/11/2017-census-agriculture-data-now-available)"
+  },
+  {
+    "objectID": "posts/how-would-hemingway-write-code/index.html",
+    "href": "posts/how-would-hemingway-write-code/index.html",
+    "title": "How Would Hemingway Write Code?",
+    "section": "",
+    "text": "LinkedIn | Github | Blog | Subscribe\nHow many times have you looked back on code you wrote a few months back and thought, “what the hell was that?” I regularly scratch my head at code I wrote a few days prior, especially if I rationalized my spaghetti code away as a “scratch file.”\nThere is objectively good code and bad code, in the same way there is good writing and bad writing. Writing good code isn’t all that different from writing good prose. Both good code and writing need to follow certain rules and best practices, as well as artfully solve many problems that lie outside the scope of rigid covenant.\nGreat code is concise, glaring in its intent, and brief - following the DRY principle. There was no other writer who followed these coding practices to their natural conclusion in literature better than Ernest Hemingway. Hemingway wrote seven novels in the first half of the 20th century and won the Nobel Prize for Literature in 1954. He was the master of the simple sentence and the restrained narrative, developing this style as a young reporter.\nMy thought experiment: how would Hemingway write code if he were a data scientist or a web developer? What can we learn from the techniques that crafted some of the best American literature? Let’s find out."
+  },
+  {
+    "objectID": "posts/how-would-hemingway-write-code/index.html#he-would-study-the-greats",
+    "href": "posts/how-would-hemingway-write-code/index.html#he-would-study-the-greats",
+    "title": "How Would Hemingway Write Code?",
+    "section": "He would study the greats",
+    "text": "He would study the greats\n\nSamuelson: But reading all the good writers must discourage you. Hemingway: Then you ought to be discouraged.\n\nIn the open-source world, we have free access to some of the best code ever written. All we have to do is open GitHub and browse the source code of our favorite projects.\nIf Hemingway wrote R code like I do, he would have read all the Tidyverse “books” written by the phenomenal R scientist Hadley Wickham. These are the classics in the R community; many R developers regularly consult these repos when writing code for inspiration or ideas on how to solve a problem.\nSince ancient times, most forms of art have had some kind of master-apprentice program. Rembrandt didn’t attend an online art school and immediately brush out The Nightwatch. He studied under a master to observe and absorb everything he could.\nToday, the apprenticeship process is not so clearly defined but continues to exist in other forms. In 1934, an aspiring young Minnesotan named Samuelson hitchhiked to Hemingway’s casa in Key West to boldly knock on his door, putting his lot in Fate’s hands. Hem not only invited him over the next day, but he hired him to watch his boat for the next year, with a great deal of mentoring along the way.\nAt one point Samuelson asked what he should read to become a great writer. Hem produced a long list of books which he pressed on Samuelson to devour.\n\nSamuelson: Should a writer have read all of those? Hemingway: All of those and plenty more. Otherwise he doesn’t know what he has to beat."
+  },
+  {
+    "objectID": "posts/how-would-hemingway-write-code/index.html#he-would-code-from-experience",
+    "href": "posts/how-would-hemingway-write-code/index.html#he-would-code-from-experience",
+    "title": "How Would Hemingway Write Code?",
+    "section": "He would code from experience",
+    "text": "He would code from experience\nOne of the reason’s Hem’s books are classics is because he wrote from his own experience. His time as an ambulance driver in Italy during the Great War fueled his masterpiece A Farewell To Arms. His love of the outdoors dripped onto the pages of The Old Man and the Sea. He didn’t doodle from imagination but from vivid memories and tactile experiences that the reader finds absolutely authentic.\nBut how does a developer code from experience? Two words: business knowledge. If you’re designing an app to optimize freight deliveries for example, ride with a delivery driver for a week to gain a different perspective that your rubber duckie could never provide. Go out and learn the How and Why of what is desired, from the people who will actually use the thing.\n\nHemingway: Whatever success I have had has been through writing what I know about."
+  },
+  {
+    "objectID": "posts/how-would-hemingway-write-code/index.html#he-would-code-longhand",
+    "href": "posts/how-would-hemingway-write-code/index.html#he-would-code-longhand",
+    "title": "How Would Hemingway Write Code?",
+    "section": "He would code longhand",
+    "text": "He would code longhand\nHem wrote much of his 50,000+ word novels longhand, with pen and paper. Even though he could have written faster with a typewriter, he still crafted most of his first drafts the ancient way: applying carbon to pressed pulp.\nModern science now tells us that writing longhand engages our brain more, helps us to be more creative, and increases comprehension - all benefits lacking from computer composition.\nWhile the idea of writing code longhand may abhor you, especially if you lean a bit too heavily on your IDE’s intellisense, you’ll realize that you will Think before writing when the effort to write is greater, instead of thinking after typing.\nI usually map out the salient chunks of my code on paper before even thinking of firing up my computer. I outline all the functions, map out which modules go where, etc., on whatever paper is handy. At that point, I’ll open my laptop and start carefully revising my ideas until I have something solid - a good first draft of the code. Next, I’ll work through one to three revisions, making changes and asking for feedback from peers. When I follow this practice, I definitely do NOT have the “WFT is this” feeling when reviewing it in the future."
+  },
+  {
+    "objectID": "posts/how-would-hemingway-write-code/index.html#he-would-stop-strategically",
+    "href": "posts/how-would-hemingway-write-code/index.html#he-would-stop-strategically",
+    "title": "How Would Hemingway Write Code?",
+    "section": "He would stop strategically",
+    "text": "He would stop strategically\nIn the age of the full stack and 10x developer, we could take a cue from Hem on resting. In one letter he outlines his thoughts on what we now call the work-home balance:\n\nHemingway: It is better to produce half as much, get plenty of exercise and not go crazy then to speed up so that your head is hardly normal.\n\nHem would begin a new adventure after finishing a manuscript or go fishing in the Gulf of Mexico when he had writer’s block. He knew the importance of getting his head out of the game at regular intervals.\nDevelopers take pride in the odd hours they keep or the late-night work sessions that empty their internal reservoirs. Hem knew that he only had at best a handful of productive hours in any one day, so he didn’t attempt to force work after the golden hours had waned.\nDo you ever stop reading a book on a cliffhanger? Just for the excitement, so when you sit down to read again you’re already jacked to see what happens? Hem did the same thing when he was writing his books. His protégé Samuelson asked him when he should knock off writing for the day, to which he responded:\n\nHemingway: The best way is always to stop when you are going good and when you know what will happen next. If you do that every day when you are writing a novel you will never be stuck…don’t think about it or worry about it until you start to write the next day, That way your subconscious will work on it all the time.\n\nHow often do you carry your work home with you? intentional or not? Junior web developer Hemingway would discourage this behavior because he learned that if he left his work at work, the next morning his subconscious would have the answer he was looking for all ready for him.\n\nHemingway: The first draft of anything is shit.\n\nHow much of your code gets past the first draft? Maybe it’s missing a few comments, or large chunks are carelessly commented out. If you were a craftsman, creating furniture that will be around long enough for your grandchildren to use, would you skip the hand sanding, leaving rough corners and blemishes?\nWhile it may be entertaining to imagine Hemingway resolving a merge conflict, we can learn much about the development process in general from the man.\nFor further reading I suggest Hemingway’s For Whom the Bell Tolls as a good entry point, and Ernest Hemingway on Writing for more on his process.\n\nWant more content like this? Subscribe here"
+  },
+  {
+    "objectID": "posts/introducing-the-schrute-package-the-entire-transcripts-from-the-office/index.html",
+    "href": "posts/introducing-the-schrute-package-the-entire-transcripts-from-the-office/index.html",
+    "title": "Introducing the schrute Package: the Entire Transcripts From The Office",
+    "section": "",
+    "text": "LinkedIn | Github | Blog | Subscribe\n\nWhat\nThis is a package that does/has only one thing: the complete transcriptions of all episodes of The Office! (US version). Schrute package website\nUse this data set to master NLP or text analysis. Let’s scratch the surface of the subject with a few examples from the excellent Text Mining with R book, by Julia Silge and David Robinson.\nFirst install the package from CRAN:\n\n# install.packages(\"schrute\")\nlibrary(schrute)\nlibrary(dplyr)\n\nThere is only one data set with the schrute package; assign it to a variable\n\nmydata <- schrute::theoffice\n\nTake a peek at the format:\n\ndplyr::glimpse(mydata)\n\nRows: 55,130\nColumns: 12\n$ index            <int> 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16…\n$ season           <int> 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,…\n$ episode          <int> 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,…\n$ episode_name     <chr> \"Pilot\", \"Pilot\", \"Pilot\", \"Pilot\", \"Pilot\", \"Pilot\",…\n$ director         <chr> \"Ken Kwapis\", \"Ken Kwapis\", \"Ken Kwapis\", \"Ken Kwapis…\n$ writer           <chr> \"Ricky Gervais;Stephen Merchant;Greg Daniels\", \"Ricky…\n$ character        <chr> \"Michael\", \"Jim\", \"Michael\", \"Jim\", \"Michael\", \"Micha…\n$ text             <chr> \"All right Jim. Your quarterlies look very good. How …\n$ text_w_direction <chr> \"All right Jim. Your quarterlies look very good. How …\n$ imdb_rating      <dbl> 7.6, 7.6, 7.6, 7.6, 7.6, 7.6, 7.6, 7.6, 7.6, 7.6, 7.6…\n$ total_votes      <int> 3706, 3706, 3706, 3706, 3706, 3706, 3706, 3706, 3706,…\n$ air_date         <chr> \"2005-03-24\", \"2005-03-24\", \"2005-03-24\", \"2005-03-24…\n\n\n\n mydata %>%\n  dplyr::filter(season == '01') %>%\n  dplyr::filter(episode == '01') %>%\n  dplyr::slice(1:3) %>%\n  knitr::kable()\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nindex\nseason\nepisode\nepisode_name\ndirector\nwriter\ncharacter\ntext\ntext_w_direction\nimdb_rating\ntotal_votes\nair_date\n\n\n\n\n\nSo what we have is the season, episode number and name, character, the line spoken and the line spoken with the stage direction (cue).\nWe can tokenize all of the lines with a few lines from the tidytext package:\n\ntoken.mydata <- mydata %>%\n  tidytext::unnest_tokens(word, text)\n\nThis increases our data set to 571612 records, where each record contains a word from the script.\n\n token.mydata %>%\n  dplyr::filter(season == '01') %>%\n  dplyr::filter(episode == '01') %>%\n  dplyr::slice(1:3) %>%\n  knitr::kable()\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nindex\nseason\nepisode\nepisode_name\ndirector\nwriter\ncharacter\ntext_w_direction\nimdb_rating\ntotal_votes\nair_date\nword\n\n\n\n\n\nIf we want to analyze the entire data set, we need to remove some stop words first:\n\nstop_words <- tidytext::stop_words\n\ntidy.token.mydata <- token.mydata %>%\n  dplyr::anti_join(stop_words, by = \"word\")\n\nAnd then see what the most common words are:\n\ntidy.token.mydata %>%\n  dplyr::count(word, sort = TRUE) \n\n# A tibble: 18,960 × 2\n   word        n\n   <chr>   <int>\n 1 yeah     2930\n 2 hey      2232\n 3 michael  1860\n 4 uh       1463\n 5 gonna    1405\n 6 dwight   1345\n 7 jim      1162\n 8 time     1149\n 9 pam      1043\n10 guys      947\n# ℹ 18,950 more rows\n\n\n\ntidy.token.mydata %>%\n  dplyr::count(word, sort = TRUE) %>%\n  dplyr::filter(n > 400) %>%\n  dplyr::mutate(word = stats::reorder(word, n)) %>%\n  ggplot2::ggplot(ggplot2::aes(word, n)) +\n  ggplot2::geom_col() +\n  ggplot2::xlab(NULL) +\n  ggplot2::coord_flip() +\n  ggplot2::theme_minimal()\n\n\n\n\nFeel free to keep going with this. Now that you have the time line (episode, season) and the character for each line and word in the series, you can perform an unlimited number of analyses. Some ideas: - Sentiment by character - Sentiment by character by season - Narcissism by season (ahem.. Nard Dog season 8-9) - Lines by character - Etc.\n\nWant more content like this? Subscribe here"
+  },
+  {
+    "objectID": "posts/announcing-proverbs-r-package/index.html",
+    "href": "posts/announcing-proverbs-r-package/index.html",
+    "title": "Announcing proverbs; A Package For Printing a Daily Proverb in R",
+    "section": "",
+    "text": "LinkedIn | Github | Blog | Subscribe\n\n“When the whirlwind passes, the wicked is no more, but the righteous has an everlasting foundation”\n- Proverbs 10:25 (NASB)\nI like to read one chapter from the Book of Proverbs from the Bible each day. There are 31 chapters in proverbs, so if I read one each day corresponding to the day of the month, I read proverbs each month through. Easy to follow and great for memorization.\nAnyways, I wanted to automate this in R because why not. I found a free API for many of the open source or public domain Bible versions like the King James Version and the World English Bible at https://bible-api.com. Then I made a quick wrapper R package on top of that API and {proverbs} was born.\n\nUsage\nIt’s very simple to use:\nproverbs::proverb()\nprints out the proverb for today with the default World English Bible translation.\n\nNice! We can switch up the translation as well. Check out all the translations with this function:\nproverbs::translations()\n\nSo if the King James is your thing, here you go:\nproverbs::proverb(translation = \"kjv\")\n\n\nPrint at R startup\nSometimes it’s necessary to force oneself to do the thing that one should do. One way to do this is to print the day’s proverb to console any time you start or restart RStudio.\nWe can do that by modifying our .Rprofile file. For our purposes, we will modify the version that affects your base user environment.\nThere is a handy function is the {usethis} package that helps us edit our .Rprofile:\nlibrary(proverbs)\nlibrary(usethis)\nusethis::edit_r_profile(scope = \"user\")\nThis will open up our .Rprofile file, and and we have to do is throw in our function from {proverbs} to make it spit out a proverb at startup:\nif(interactive()) {\n\nproverbs::proverb()\n\n}\nYou’ll need to restart your session but you should be greeted with a proverb after that.\nPlease check out the website or repo for questions or pull requests, or a star if you feel like it.\n\nWant more content like this? Subscribe here"
+  },
+  {
+    "objectID": "posts/my-first -linux-snapcraft-app/index.html",
+    "href": "posts/my-first -linux-snapcraft-app/index.html",
+    "title": "My First Linux Snapcraft App",
+    "section": "",
+    "text": "LinkedIn | Github | Blog | Subscribe\n\nIn an effort to continually improve both my linux and python skills, I decided to build a snapcraft app, which is the universal “app store” for linux machines.\nWhat started off as a seemingly easy process turned into a weekend-long angst-filled coding episode that left me more agitated than not. The process for creating a snap seemed completely foreign to my hacky, data science code tendencies, but eventually I created a successful build and pushed the app to the website.\n\n\n\nGet it from the Snap Store\n\n\n\nThe app is an incredibly-simple python CLI tool, in fact, it was one of the first programs I had ever written in the language. It’s a little rough, but it was the brush-clearing project I needed to get more comfy with the snapcraft process.\n\nWant more content like this? Subscribe here"
+  },
+  {
+    "objectID": "posts/building-a-corporate-r-package-for-pleasure-and-profit/index.html",
+    "href": "posts/building-a-corporate-r-package-for-pleasure-and-profit/index.html",
+    "title": "Building a Corporate R Package for Pleasure and Profit",
+    "section": "",
+    "text": "LinkedIn | Github | Blog | Subscribe\nThe “Great Restructuring” of our economy is underway. That’s the official name for what we know is happening: the best are rising to the top, and the mediocre are sinking to the bottom. It’s the Matthew Principle in-motion.\nIn Brynjolfsson and McAfee’s 2011 book Race Against the Machine, they detail how this New Economy will favor those that have the skill set or the capital to interface and invest in new technologies such as deep learning and robotics, which are becoming more ubiquitous every day.\nCal Newport’s Deep Work outlines two core abilities for thriving in this new economy:\nDon’t repeat yourself (DRY) is a well-known maxim in software development, and most R programmers follow this rule and build functions to avoid duplicating code. But how often do you:\nand so on? Notice a pattern? The word “same” is sprinkled in each bullet point. I smell an opportunity to apply DRY!\nIf you work in a corporate or academic setting like me, you probably do these things pretty often. I’m going to show you how to wrap all of these tasks into a minimalist R package to save you time, which, as we’ve learned, is one of the keys to your success in the New Economy."
+  },
+  {
+    "objectID": "posts/building-a-corporate-r-package-for-pleasure-and-profit/index.html#tools",
+    "href": "posts/building-a-corporate-r-package-for-pleasure-and-profit/index.html#tools",
+    "title": "Building a Corporate R Package for Pleasure and Profit",
+    "section": "Tools",
+    "text": "Tools\nFirst some groundwork. I’ll assume if you work in R that you are using RStudio, which will be necessary to follow along. I’m using R version 3.5.1 on a Windows 10 machine (ahh, corporate America…). Note that the package we are about to develop is minimalist, which is a way of saying that we’re gonna cut corners to make a minimum viable product. We won’t get deep into documentation and dependencies much, as the packages we’ll require in our new package are more than likely already on your local machine."
+  },
+  {
+    "objectID": "posts/building-a-corporate-r-package-for-pleasure-and-profit/index.html#create-an-empty-package-project",
+    "href": "posts/building-a-corporate-r-package-for-pleasure-and-profit/index.html#create-an-empty-package-project",
+    "title": "Building a Corporate R Package for Pleasure and Profit",
+    "section": "Create an empty package project",
+    "text": "Create an empty package project\nWe’ll be creating a package for the consulting firm Ketchbrook Analytics, a boutique shop from Connecticut who know their way around a %>% better than anyone.\nOpen RStudio and create a project in a new directory:\n\nSelect R Package and give it a name. I’ll call mine ketchR.\n\nRStudio will now start a new session with an example “hello” function. Looks like we’re ready to get down to business."
+  },
+  {
+    "objectID": "posts/building-a-corporate-r-package-for-pleasure-and-profit/index.html#custom-functions",
+    "href": "posts/building-a-corporate-r-package-for-pleasure-and-profit/index.html#custom-functions",
+    "title": "Building a Corporate R Package for Pleasure and Profit",
+    "section": "Custom functions",
+    "text": "Custom functions\nLet’s start by adding a function to our package. A common task at Ketchbrook is mapping customer data with an outline for market area or footprint. We can easily wrap that into a simple function.\nCreate a new R file and name it ketchR.R. We’ll put all of our functions in here.\n# To generate the footprint_polys data\nfootprint_poly <- function() {\n\n  #' Returns object of class SpatialPolygons of the AgC footprint.\n  #' Utilizes the Tigris:: package.\n\n\n  require(tidyverse)\n  require(tigris)\n  require(sf)\n  # Get County Polygons\n  states.raw <- tigris::states()\n\n  states <- states.raw[states.raw@data$STUSPS %in% c(\"CA\", \"OR\", \"WA\"),]\n\n  states <- sf::st_as_sfc(states)\n  states <- sf::st_union(states)\n  states <- as(states, 'Spatial')\n\n  return(states)\n\n\n}\nSo what we’ve done is create a function that utilizes the tigris package to grab shapefiles for states in our footprint. The function then unions those states into one contiguous polygon so we can easily overlay this using leaflet, ggmap, etc.\nTry your new function out:\nlibrary(leaflet)\n\nleaflet() %>% \n  addTiles() %>% \n  addPolygons(data = footprint_poly())\n\nThere is no limit to what kinds of custom functions you can add in your package. Machine learning algs, customer segmentation, whatever you want you can throw in a function with easy access in your package."
+  },
+  {
+    "objectID": "posts/building-a-corporate-r-package-for-pleasure-and-profit/index.html#datasets",
+    "href": "posts/building-a-corporate-r-package-for-pleasure-and-profit/index.html#datasets",
+    "title": "Building a Corporate R Package for Pleasure and Profit",
+    "section": "Datasets",
+    "text": "Datasets\nLet’s stay on our geospatial bent. Branch or store-level analysis is common in companies spread out over a large geographical region. In our example, Ketchbrook’s client has eight branches from Tijuana to Seattle. Instead of manually storing and importing a CSV or R data file each time we need to reference these locations, we can simply save the data set to our package.\nIn order to add a dataset to our package, we first need to pull it into our local environment either by reading a csv or grabbing it from somewhere else. I simply read in a csv from my local PC:\nbranches <- read.csv(\"O:\\\\exchange\\\\branches.csv\", header = T)\nThis is what the data set looks like:\n\nNow, we have to put this data in a very specific place, or our package won’t be able to find it. Like when my wife hides the dishwasher so I’m reluctantly forced to place dirty dishes on the counter.\nFirst, create a folder in your current directory called “data.” Your directory should look like this now, btw:\n\nBonus points: use the terminal feature in RStudio to create the directory easily:\n\nNow we need to save this branches data set into our new folder as an .RData file:\nsave(branches, file = \"data/branches.RData\")"
+  },
+  {
+    "objectID": "posts/building-a-corporate-r-package-for-pleasure-and-profit/index.html#now-we-build",
+    "href": "posts/building-a-corporate-r-package-for-pleasure-and-profit/index.html#now-we-build",
+    "title": "Building a Corporate R Package for Pleasure and Profit",
+    "section": "Now, we build",
+    "text": "Now, we build\nLet’s test this package out while there’s still a good chance we didn’t mess anything up. When we build the package, we are compiling it into the actual package as we know it. In RStudio, this is super simple. Navigate to the “Build” tab, and click “Install and Restart.” If you’ve followed along, you shouldn’t see any errors, but if you do see errors, try updating your local packages.\nNow, we should be able to call our package directly and use our branches dataset:\n\nCool, that works. Now let’s plot our branches with Leaflet quick to make sure footprint_poly() worked:\nlibrary(leaflet)\n\nleaflet() %>% \n  addTiles() %>% \n  addPolygons(data = ketchR::footprint_poly()) %>% \n  addCircles(data = branches,\n             lat = branches$lat,\n             lng = branches$lon,\n             radius = 40000,\n             stroke = F,\n             color = \"red\")\n\nNiiiice."
+  },
+  {
+    "objectID": "posts/building-a-corporate-r-package-for-pleasure-and-profit/index.html#database-connections",
+    "href": "posts/building-a-corporate-r-package-for-pleasure-and-profit/index.html#database-connections",
+    "title": "Building a Corporate R Package for Pleasure and Profit",
+    "section": "Database connections",
+    "text": "Database connections\nOne of the most common tasks in data science is pulling data from databases. Let’s say that Ketchbrook stores data in a SQL Server. Instead of manually copy and pasting a connection script or relying on the RStudio session to cache the connection string, let’s just make a damn function.\nget_db <- function(query = \"SELECT TOP 10 * FROM datas.dbo.Customers\") {\n\n  #' Pull data from database\n  #' @param query: enter a SQL query; Microsoft SQL syntax please\n\n  require(odbc)\n  con <- dbConnect(odbc(),\n                   Driver = \"SQL Server\",\n                   Server = \"datas\",\n                   Database = \"dataserver\",\n                   UID = \"user\",\n                   PWD = rstudioapi::askForSecret(\"password\"),\n                   Port = 6969)\n\n\n\n  z <- odbc::dbGetQuery(con, query)\n\n  return(z)\n\n  odbc::dbDisconnect(con)\n\n}\nHere, we’re building a function that lets us enter any query we want to bang against this SQL Server. The function creates the connection, prompts us to enter the password each time (we don’t store passwords in code…) and closes the connection when it’s through.\nLet’s take it a step further. Many times you may pull a generic SELECT * query in order to leverage dplyr to do your real data munging. In this case, it’s easier to just make a function that does just that.\nLet’s make another function that pulls a SELECT * FROM Customers.\nget_customers <- function() {\n\n  #' Pull most recent customer data from db - datascience.agc_Customers\n\n  require(odbc)\n  con <- dbConnect(odbc(),\n                   Driver = \"SQL Server\",\n                   Server = \"datas\",\n                   Database = \"dataserver\",\n                   UID = \"user\",\n                   PWD = rstudioapi::askForSecret(\"password\"),\n                   Port = 6969)\n\n\n  query1 <- \"SELECT * FROM datas.dbo.Customers\"\n  z <- odbc::dbGetQuery(con, query1)\n\n  return(z)\n\n  odbc::dbDisconnect(con)\n\n\n}\nAhh, this alone saved me quarters-of-hours each week once I started using it in my own practice. Think hard about any piece of code that you may copy and paste on a regular basis — that’s a candidate for your packages stable of functions."
+  },
+  {
+    "objectID": "posts/building-a-corporate-r-package-for-pleasure-and-profit/index.html#branded-ggplot-visualizations",
+    "href": "posts/building-a-corporate-r-package-for-pleasure-and-profit/index.html#branded-ggplot-visualizations",
+    "title": "Building a Corporate R Package for Pleasure and Profit",
+    "section": "Branded ggplot visualizations",
+    "text": "Branded ggplot visualizations\nOk now we’re getting to the primo honey, the real time-savers, the analyst-impresser parts of our package. We’re going to make it easy to produce consistent data visualizations which reflect a company’s image with custom colors and themes.\nAlthough I personally believe the viridis palette is the best color scheme of all time, it doesn’t necessarily line up with Ketchbrook’s corporate color palette. So let’s make our own set of functions to use Ketchbrook’s palette is a ‘lazy’ way. (Big thanks to this Simon Jackson’s great article).\nGet the colors\nLet’s pull the colors directly from their website. We can use the Chrome plugin Colorzilla to pull the colors we need.\n\nTake those hex color codes and paste them into this chunk like so:\n# Palette main colors\nketch.styles <- c(\n  `salmon` = \"#F16876\",\n  `light_blue`= \"#00A7E6\",\n  `light_grey` = \"#E8ECF8\",\n  `brown`  = \"#796C68\")\nThis will give us a nice palette that has colors different enough for categorical data, and similar enough for continuous data. We can even split this up into two separate sub-palettes for this very purpose:\n# Create separate palettes\nagc.palettes <- list(\n  `main`  = styles('salmon','light_blue', 'brown', 'light_grey'),\n\n  `cool`  = styles('light_blue', 'light_grey')\n)\nCreate the functions\nI’m not going to go through these functions line by line; if you have questions reach out to me at bradley.lindblad[at]gmail[dot]com, create an issue on the Github repo. Here is the full code snippet:\n\n# Palette main colors\nketch.styles <- c(\n  `salmon` = \"#F16876\",\n  `light_blue`= \"#00A7E6\",\n  `light_grey` = \"#E8ECF8\",\n  `brown`  = \"#796C68\")\n\n# Fn to extract them by hex codes\nstyles <- function(...) {\n  cols <- c(...)\n\n  if (is.null(cols))\n    return (ketch.styles)\n\n  ketch.styles[cols]\n}\n\n# Create separate palettes\nketch.palettes <- list(\n  `main`  = styles('salmon','light_blue', 'brown', 'light_grey'),\n\n  `cool`  = styles('light_blue', 'light_grey')\n)\n\n# Fn to access them\nketch_pal <- function(palette = \"main\", reverse = FALSE, ...) {\n  pal <- ketch.palettes[[palette]]\n\n  if (reverse) pal <- rev(pal)\n\n  colorRampPalette(pal, ...)\n}\n\n# Fn for customer scale\nscale_color_ketch <- function(palette = \"main\", discrete = TRUE, reverse = FALSE, ...) {\n  pal <- ketch_pal(palette = palette, reverse = reverse)\n\n  #' Scale color using AgC color palette.\n  #' @param palette: main, greens or greys\n  #' @param discrete: T or F\n  #' @param reverse: reverse the direction of the color scheme\n\n  if (discrete) {\n    discrete_scale(\"colour\", paste0(\"ketch_\", palette), palette = pal, ...)\n  } else {\n    scale_color_gradientn(colours = pal(256), ...)\n  }\n}\n\n\nscale_fill_ketch <- function(palette = \"main\", discrete = TRUE, reverse = FALSE, ...) {\n\n  #' Scale fill using AgC color palette.\n  #' @param palette: main, greens or greys\n  #' @param discrete: T or F\n  #' @param reverse: reverse the direction of the color scheme\n\n  pal <- ketch_pal(palette = palette, reverse = reverse)\n\n  if (discrete) {\n    discrete_scale(\"fill\", paste0(\"ketch_\", palette), palette = pal, ...)\n  } else {\n    scale_fill_gradientn(colours = pal(256), ...)\n  }\n}\nLet’s test it out:\nggplot(mtcars) +\n  geom_point(aes(mpg, disp, color = qsec), alpha = 0.5, size = 6) +\n  ketchR::scale_color_ketch(palette = \"main\", discrete = F) +\n  theme_minimal()\nproduces:"
+  },
+  {
+    "objectID": "posts/building-a-corporate-r-package-for-pleasure-and-profit/index.html#markdown-templates",
+    "href": "posts/building-a-corporate-r-package-for-pleasure-and-profit/index.html#markdown-templates",
+    "title": "Building a Corporate R Package for Pleasure and Profit",
+    "section": "Markdown templates",
+    "text": "Markdown templates\nNow that we’ve fetched the data and plotted the data much more quickly, the final step is to communicate the results of our analysis. Again, we want to be able to do this quickly and consistently. A custom markdown template is in order.\nI found this part to be the hardest to get right, as everything needs to be in the right place within the file structure, so follow closely. (Most of the credit here goes to this article by Chester Ismay.)\n1. Create skeleton directory\ndir.create(\"ketchbrookTemplate/inst/rmarkdown/templates/report/skeleton\",\n    recursive = TRUE)\nThis creates a nested directory that will hold our template .Rmd and .yaml files. You should have a new folder in your directory called “ketchbrookTemplate”:\n\n2. Create skeleton.Rmd\nNext we create a new RMarkdown file:\n\nThis will give us a basic RMarkdown file like this:\n\nAt this point let’s modify the template to fit our needs. First I’ll replace the top matter with a theme that I’ve found to work well for me, feel free to rip it off:\n---\ntitle: \"ketchbrookTemplate\"\nauthor: Brad Lindblad\noutput: \n  prettydoc::html_pretty:\n    theme: cayman\n    number_sections: yes\n    toc: yes\n  pdf_document: \n    number_sections: yes\n    toc: yes\n  rmarkdown::html_document:\n    theme: cayman\n  html_notebook: \n    number_sections: yes\n    theme: journal\n    toc: yes\nheader-includes:\n  - \\setlength{\\parindent}{2em}\n  - \\setlength{\\parskip}{0em}\ndate: February 05, 2018\nalways_allow_html: yes\n#bibliography: bibliography.bib\nabstract: \"Your text block here\"\n---\nI like to follow an analysis template, so this is the top matter combined with my basic EDA template:\n--\ntitle: \"Customer Service Survey EDA\"\nauthor: Brad Lindblad, MBA\noutput: \n  pdf_document: \n    number_sections: yes\n    toc: yes\n  html_notebook: \n    number_sections: yes\n    theme: journal\n    toc: yes\n  rmarkdown::html_document:\n    theme: cayman\n  prettydoc::html_pretty:\n    theme: cayman\n    number_sections: yes\n    toc: yes\nheader-includes:\n  - \\setlength{\\parindent}{2em}\n  - \\setlength{\\parskip}{0em}\ndate: September 20, 2018\nalways_allow_html: yes\nbibliography: bibliography.bib\nabstract: \"Your text block here\"\n\n---\n\nWriting Your Report\nNow that you've done the necessary preparation, you can begin writing your report. To start, keep in mind there is a simple structure you should follow. Below you'll see the sections in order along with descriptions of each part.\n\nIntroduction\n\nSummarize the purpose of the report and summarize the data / subject.\nInclude important contextual information about the reason for the report.\nSummarize your analysis questions, your conclusions, and briefly outline the report.\nBody - Four Sections\n\nData Section - Include written descriptions of data and follow with relevant spreadsheets.\nMethods Section - Explain how you gathered and analyzed data.\nAnalysis Section - Explain what you analyzed. Include any charts here.\nResults - Describe the results of your analysis.\nConclusions\n\nRestate the questions from your introduction.\nRestate important results.\nInclude any recommendations for additional data as needed.\nAppendix\n\nInclude the details of your data and process here. \nInclude any secondary data, including references.\n\n::: {.cell}\n\n:::\n\n# Introduction\n\n# Data\n\n# Methods\n\n# Analysis\n\n# Results\n\n# Conclusions\n\n# Appendix\n\n# References\nSave this file in the skeleton folder and we’re done here.\n3. Create the yaml file\nNext we need to create a yaml file. Simply create a new text document called “template.yaml” in RStudio and save it like you see in this picture:\n\nRebuild the package and open a new RMarkdown document, select “From Template” and you should see your new template available:\n\nSweet. You can now knit to html pretty and have sweet output like this:\n\nIf you run into problems, make sure your file structure matches this:\n├───inst\n│   └───rmarkdown\n│       └───templates\n│           └───ketchbrookTemplate\n│               │   template.yaml\n│               │\n│               └───skeleton\n│                       skeleton.nb.html\n│                       skeleton.Rmd"
+  },
+  {
+    "objectID": "posts/building-a-corporate-r-package-for-pleasure-and-profit/index.html#whats-next",
+    "href": "posts/building-a-corporate-r-package-for-pleasure-and-profit/index.html#whats-next",
+    "title": "Building a Corporate R Package for Pleasure and Profit",
+    "section": "What’s next?",
+    "text": "What’s next?\nSo we’ve essentially made a bomb package that will let you do everything just a little more quickly and a little better: pull data, reference common data, create data viz and communicate results.\nFrom here, you can use the package locally, or push it to a remote Github repository to spread the code among your team.\nThe full code for this package is available at the Github repo set up for it. Feel free to fork it and make it your own. I’m not good at goodbye’s so I’m just gonna go.\n\nWant more content like this? Subscribe here"
+  },
+  {
+    "objectID": "posts/roam-attribute-table-analysis/index.html",
+    "href": "posts/roam-attribute-table-analysis/index.html",
+    "title": "Analyzing Roam Research Attribute Tables with Python",
+    "section": "",
+    "text": "LinkedIn | Github | Blog | Subscribe\n\nImage Source: roamresearch.com\nRoam Research is a revolutionary note-taking tool for networked thought. As a data scientist and reader, I take many notes on many different topics. I’ve tried many different note-taking apps from Evernote and OneNote to the bare bones of Simple Note. I’ve always bumped into a problem with these tools, which is that the design and format of the tool restricted how I took notes.\nFor example, with Evernote you are forced to more or less put an idea on a single card, with little freedom in relating that note to other notes in your Evernote corpus. The search function allowed you to find specific words, but each idea is and was indefinitely separated from the others.\nThe folders and tagging provide some semblance of structure, but eventually your work or life will change such that you’ll want to rearrange that structure. Not fun.\nThe human mind doesn’t work that way. Studies have shown that the neurological structure of the brain forms an incomprehensibly complex network that modern machine learning barely intimates.\n\nWhy Roam?\nRoam allows you to sputter ideas without having to worry about which folder to place them in, or if an idea could fit into multiple folders. You don’t have to pick just one location for that idea to languish in. For instance, if you have a nice python code snippet for working in Databricks that you’d like to save for later, you don’t have to worry about whether to place it in your databricks snippet folder or your python snippet folder; you simply tag the code with both and it will appear in both. An idea can live in two places concurrently, no sweat.\nThis is huge for allowing you to simply take the note and trust the system to organize for you. Roam has allowed me to consolidate the following activities and functions under a single tool: - Code snippets and cheats - Commonplace book - Bible study - Short-form writing (like this article) - Data science lab notebook - Goal setting and tracking - And, for the purposes of this article, habit tracking.\n\n\nHabit tracking in Roam\nI wanted to track the arthritis in one of my hands along with a few other variables to look for any indication of a relationship. There are many tools and apps that are made for this very thing, but my goal is to do as much as I can in Roam.\nWe use a feature in Roam called attribute tables to accomplish this. This article on Reddit does a great job of explaining how to set up attribute tables, so check that out if you’ve never made one before. The output of a habit tracking table looks like this:\n\nIf you were to look under the hood at the table, you would find that it looks an awful lot like an html table. The Pandas python library has a nice little function for parsing simple html tables called read_html(), and don’t ya know it parses this Roam attribute table real slick.\n\n\nThe python script\nThe best way I found to parse the table was to download the actual html page with your browsers download function; in Brave it’s as simple as right-clicking on the page, hitting Save as > Complete Webpage, and saving to a location. I like to have a daily page open which usually just has one table. If you have multiple tables, you will have to modify the last line of the script a bit to select it.\nAfter that, this little python script reads your Roam attribute table into a pandas dataframe:\nimport pandas as pd\n\n# download daily page html to local\nFILE = \"/home/brad/Desktop/July 12th, 2021.html\"\n\nhtml = pd.read_html(FILE)\n\ndf = html[0]\nand gives us:\n\nNow you can do any analysis on your habits that you wish, all within the comforts of Roam and python.\n\nWant more content like this?\nSubscribe here"
+  },
+  {
+    "objectID": "posts/introducing-schrute-jl-the-office-transcripts-data-set-for-julia/index.html",
+    "href": "posts/introducing-schrute-jl-the-office-transcripts-data-set-for-julia/index.html",
+    "title": "Introducing Schrute.jl: The Office Transcripts Data Set for Julia",
+    "section": "",
+    "text": "LinkedIn | Github | Blog | Subscribe\n\nIn an effort to broaden my horizons, I’ve ported the popular Schrute package from both R and python to the Julia language.\nThe package has one function which returns a dataframe containing the entire transcripts from The Office; 55130 lines in 9 seasons. There are also attribute fields such as writer, director and imdb score for each episode.\nFor a complete rundown (Charles Miner), see the package tutorial, or view the source code at the Github repo.\n\nWant more content like this?\nSubscribe here"
+  },
+  {
+    "objectID": "posts/index.html",
+    "href": "posts/index.html",
+    "title": "Blog",
+    "section": "",
+    "text": "proverbs Now Has Support for ESV Translation\n\n\n\n\n\n\n\nR\n\n\nR package\n\n\nfaith\n\n\n\n\nESV now supported in proverbs R package\n\n\n\n\n\n\nDec 14, 2022\n\n\nBrad Lindblad\n\n\n\n\n\n\n  \n\n\n\n\nAnnouncing proverbs; A Package For Printing a Daily Proverb in R\n\n\n\n\n\n\n\nR\n\n\nR package\n\n\nfaith\n\n\n\n\nNew R package alert\n\n\n\n\n\n\nFeb 2, 2022\n\n\nBrad Lindblad\n\n\n\n\n\n\n  \n\n\n\n\nUsing Github Actions, Python and Telegram to Get Ribeye Specials\n\n\n\n\n\n\n\npython\n\n\ngithub actions\n\n\nCI/CD\n\n\nhacking\n\n\n\n\nCheaper meat with the help of a short tech stack\n\n\n\n\n\n\nFeb 1, 2022\n\n\nBrad Lindblad\n\n\n\n\n\n\n  \n\n\n\n\nAnalyzing Roam Research Attribute Tables with Python\n\n\n\n\n\n\n\npython\n\n\nR\n\n\nnotes\n\n\nhacking\n\n\n\n\nGetting more out of Roam with a little bit of python\n\n\n\n\n\n\nJul 13, 2021\n\n\nBrad Lindblad\n\n\n\n\n\n\n  \n\n\n\n\nAnnouncing the {cheatsheet} Package\n\n\n\n\n\n\n\nR\n\n\nR package\n\n\ncheatsheets\n\n\n\n\nNew R package alert\n\n\n\n\n\n\nApr 14, 2021\n\n\nBrad Lindblad\n\n\n\n\n\n\n  \n\n\n\n\ntidyUSDA Version 0.3.1 Is Now Available\n\n\n\n\n\n\n\nR\n\n\nR package\n\n\nagriculture\n\n\n\n\nLatest tidyUSDA release\n\n\n\n\n\n\nMar 11, 2021\n\n\nBrad Lindblad\n\n\n\n\n\n\n  \n\n\n\n\nProfessional Financial Reports with RMarkdown\n\n\n\n\n\n\n\nR\n\n\nreporting\n\n\nquarto\n\n\nfinance\n\n\n\n\nParamaterizing for profit\n\n\n\n\n\n\nJan 6, 2021\n\n\nBrad Lindblad\n\n\n\n\n\n\n  \n\n\n\n\nIntroducing Schrute.jl: The Office Transcripts Data Set for Julia\n\n\n\n\n\n\n\njulia\n\n\njulia package\n\n\ntext analysis\n\n\n\n\nSchrute, but in Julia\n\n\n\n\n\n\nApr 25, 2020\n\n\nBrad Lindblad\n\n\n\n\n\n\n  \n\n\n\n\nMy First Linux Snapcraft App\n\n\n\n\n\n\n\nlinux\n\n\nfaith\n\n\n\n\nSome cool linux stuff\n\n\n\n\n\n\nFeb 8, 2020\n\n\nBrad Lindblad\n\n\n\n\n\n\n  \n\n\n\n\nUsing the Biblepi Program\n\n\n\n\n\n\n\npython\n\n\nraspberry pi\n\n\nfaith\n\n\n\n\nListen to a random Bible verse on a Raspberry Pi\n\n\n\n\n\n\nJan 19, 2020\n\n\nBrad Lindblad\n\n\n\n\n\n\n  \n\n\n\n\nPython Text Analysis With the Schrutepy Package\n\n\n\n\n\n\n\npython\n\n\nanalysis\n\n\npython package\n\n\n\n\nA python version of the R package schrute is now available\n\n\n\n\n\n\nJan 18, 2020\n\n\nBrad Lindblad\n\n\n\n\n\n\n  \n\n\n\n\nHow Would Hemingway Write Code?\n\n\n\n\n\n\n\ncoding\n\n\nwriting\n\n\n\n\nProbably with a whiskey soda\n\n\n\n\n\n\nDec 30, 2019\n\n\nBrad Lindblad\n\n\n\n\n\n\n  \n\n\n\n\nUsing R to Analyze Fargo Crime Data\n\n\n\n\n\n\n\nR\n\n\nanalysis\n\n\n\n\nInto the woodchipper\n\n\n\n\n\n\nDec 23, 2019\n\n\nBrad Lindblad\n\n\n\n\n\n\n  \n\n\n\n\nIntroducing the schrute Package: the Entire Transcripts From The Office\n\n\n\n\n\n\n\nR\n\n\ntext analysis\n\n\nR package\n\n\n\n\nI’m going to Costa Rica\n\n\n\n\n\n\nDec 15, 2019\n\n\nBrad Lindblad\n\n\n\n\n\n\n  \n\n\n\n\nBuilding a Corporate R Package for Pleasure and Profit\n\n\n\n\n\n\n\nR\n\n\nR package\n\n\n\n\nSave future-you time\n\n\n\n\n\n\nOct 20, 2019\n\n\nBrad Lindblad\n\n\n\n\n\n\n  \n\n\n\n\nAnnouncing tidyUSDA: A Package for working with USDA Data\n\n\n\n\n\n\n\nR\n\n\nR package\n\n\nagriculture\n\n\n\n\nNew R package alert\n\n\n\n\n\n\nOct 18, 2019\n\n\nBrad Lindblad\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/tidyUSDA-version-031-is-available/index.html",
+    "href": "posts/tidyUSDA-version-031-is-available/index.html",
+    "title": "tidyUSDA Version 0.3.1 Is Now Available",
+    "section": "",
+    "text": "LinkedIn | Github | Blog | Subscribe\n\nPreviously there was an issue with certain calls to the tidyUSDA::getQuickstat() function, where values that included an “&” were not passing through the API call.\nThis error has been resolved. Please updated your version of {tidyUSDA} with\ninstall.packages(\"tidyUSDA\")\nYou can check that you have the latest version with packageVersion(\"tidyUSDA\"), which should return [1] ‘0.3.1’\nI appreciate the community helping to continually improve {tidyUSDA}!\nLearn more about {tidyUSDA} at its website\n\nWant more content like this? Subscribe here"
+  },
+  {
+    "objectID": "posts/using-the-biblepi-program/index.html",
+    "href": "posts/using-the-biblepi-program/index.html",
+    "title": "Using the Biblepi Program",
+    "section": "",
+    "text": "LinkedIn | Github | Blog | Subscribe\nThe codebase for a long-suffering hobby project of mine is now stable on Github. The gist of it is, a small python3 program to run on a little computer (I used a Raspberry Pi 3) attached to a touchscreen to play a random New Testament book whenever I want. Obviously there are great apps like YouVersion that will read the bible to you but I wanted something I could put a timer on to play in the kid’s room before bed or in my kitchen as we cook.\nThis simple program does just that. I have it running on Ubuntu Mate 18.04, which is a lightweight Ubuntu distro that I’ve come to love, although you can use any os that you see fit. The ubuntu is displayed on a small $30 touchscreen from amazon and the audio sings through a cheap speaker also from amazon.\nThe UI is simple:\nYou can either set a timer to play a random bible book for n minutes, or hit freeplay and play a book for as long as you want.\nI think the baby linux on the tiny screen is adorable:"
+  },
+  {
+    "objectID": "posts/using-the-biblepi-program/index.html#quickstart",
+    "href": "posts/using-the-biblepi-program/index.html#quickstart",
+    "title": "Using the Biblepi Program",
+    "section": "Quickstart",
+    "text": "Quickstart\nTo get started, clone the repo\ngit clone https://github.com/bradlindblad/biblepi\nAnd then install requirements\npip install -r requirements.txt\nNote that this program uses the vlc library within the root folder, so if you already have vlc installed you probably want to isolate this program in a container or virtual environment.\nAt this point everything should be squared away, so all you have to do is run the main python program\npython3 main.py  \nOn non-unix (Windows)\npython main.py\nIf you have any improvements you’d like to suggest or if you want to give the repo a star, visit it at: https://github.com/bradlindblad/biblepi\n\nWant more content like this? Subscribe here"
   },
   {
     "objectID": "contact.html",
@@ -21,73 +420,52 @@
     "text": "Shoot me an email at me@bradlindblad.com if you want to chat, or subscribe to my posts\n\n\n\n\n\n    \n    Get blog posts sent to your inbox"
   },
   {
-    "objectID": "index.html#bio",
-    "href": "index.html#bio",
-    "title": "Brad Lindblad, MBA",
+    "objectID": "talks/professional-financial-reports-with-rmarkdown/index.html",
+    "href": "talks/professional-financial-reports-with-rmarkdown/index.html",
+    "title": "Professional Financial Reports with RMarkdown",
     "section": "",
-    "text": "He is a data scientist."
-  },
-  {
-    "objectID": "index.html#family",
-    "href": "index.html#family",
-    "title": "Brad Lindblad",
-    "section": "Family",
-    "text": "Family\nHe has a nice family."
-  },
-  {
-    "objectID": "index.html#projects",
-    "href": "index.html#projects",
-    "title": "Brad Lindblad, MBA",
-    "section": "Projects",
-    "text": "Projects\nHe has a nice family."
-  },
-  {
-    "objectID": "index.html#technologies",
-    "href": "index.html#technologies",
-    "title": "Brad Lindblad",
-    "section": "Technologies",
-    "text": "Technologies"
-  },
-  {
-    "objectID": "index.html#education",
-    "href": "index.html#education",
-    "title": "Brad Lindblad",
-    "section": "Education",
-    "text": "Education"
-  },
-  {
-    "objectID": "index.html#personal-life",
-    "href": "index.html#personal-life",
-    "title": "Brad Lindblad, MBA",
-    "section": "Personal life",
-    "text": "Personal life\nLink to woodworking blog"
-  },
-  {
-    "objectID": "index.html#education-awards",
-    "href": "index.html#education-awards",
-    "title": "Brad Lindblad, MBA",
-    "section": "Education & awards",
-    "text": "Education & awards"
-  },
-  {
-    "objectID": "index.html#skills",
-    "href": "index.html#skills",
-    "title": "Brad Lindblad, MBA",
-    "section": "Skills",
-    "text": "Skills"
+    "text": "LinkedIn | Github | Blog | Subscribe\n\nI recently gave a lightning talk at the Financial Industry R Meetup on how you can use RMarkdown to create extremely professional reports using RMarkdown and a slew of other popular R tools.\nYou can re-watch the talk on Youtube\nYou can also read the directions and overview at the Github repo.\n\nWant more content like this? Subscribe here"
   },
   {
     "objectID": "talks/index.html",
     "href": "talks/index.html",
     "title": "Talks and presentations",
     "section": "",
-    "text": "No matching items"
+    "text": "Professional Financial Reports with RMarkdown\n\n\n\n\n\n\n\nR\n\n\nreporting\n\n\nquarto\n\n\nfinance\n\n\n\n\nParamaterizing for profit\n\n\n\n\n\n\nJan 6, 2021\n\n\nBrad Lindblad\n\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "blog/index.html",
-    "href": "blog/index.html",
-    "title": "Blog",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Brad Lindblad, MBA",
     "section": "",
-    "text": "No matching items"
+    "text": "I’m a Data Scientist working in the farm credit system out of Fargo, North Dakota. I have created open source projects that have been downloaded over 50,000 times, created Business Intelligence and Data Science teams as large financial institutions and taught coding and data science to hundreds along the way. My main tech stack is R and python along with SQL, Julia and a few others.\nI attended North Dakota State University and grabbed a BA in Business Administration as well as an MBA later on in my career.\nI started off my career in transportation and eventually migrated to the data side of things; most recently as a Business Intelligence Strategist at a regional bank and now as a Data Scientist. I work in both AWS and Azure stacks and heavily utilize Databricks and Posit Connect in my day-to-day. I’m a big fan of Edward Tufte’s work in data visualization as well as Stephen Few’s.\nI am a certified RStudio Tidyverse Instructor, and enjoy my time introducing folks to the R language as well as upskilling seasoned R operators. More here.\nI sit on the board of the North Dakota State University Center for Enterprise Business Analytics and help guide their buildout of a world-class institution in the data realm."
+  },
+  {
+    "objectID": "index.html#interests",
+    "href": "index.html#interests",
+    "title": "Brad Lindblad, MBA",
+    "section": "Interests",
+    "text": "Interests\n\nGeospatial data science: I’ve enjoyed working on dozens of geospatial projects throughout my career. I place special emphasis on the data visualization aspect of the art as well as user experience.\nR shiny application development: Building Shiny apps within the Golem framework is my preferred delivery method for the data science projects I work on. I find the robustness of Golem mated with the unlimited potential of Shiny to far outshine the more rigid, institutional BI tools out there.\nOpen source: I’ve created a small handful of open source projects that have been gaining traction.\n\n📦 schrute R package creator, as well as versions for python and Julia\n📦 tidyUSDA R package creator; grabs USDA data in tidy format for analysis\n📦 cheatsheets R package creator; downloads all RStudio cheatsheets locally\n📦 proverbs R package creator; print out a daily Bible proverb to your console"
+  },
+  {
+    "objectID": "index.html#selected-publications",
+    "href": "index.html#selected-publications",
+    "title": "Brad Lindblad, MBA",
+    "section": "Selected publications",
+    "text": "Selected publications\n\nProfessional Finance Reports with RMarkdown\nBuilding a Corporate R Package for Pleasure and Profit\nBuild a Cryptocurrency Trading Bot With R\nI Analyzed Fargo Crime Data and This is What I Found"
+  },
+  {
+    "objectID": "index.html#awards-patents",
+    "href": "index.html#awards-patents",
+    "title": "Brad Lindblad, MBA",
+    "section": "Awards & patents",
+    "text": "Awards & patents\n\nPrairie Business 40 Under 40 - 2017\nPatent - Methods and apparatus for determining geographic pre-incident risk exposure"
+  },
+  {
+    "objectID": "index.html#personal-life",
+    "href": "index.html#personal-life",
+    "title": "Brad Lindblad, MBA",
+    "section": "Personal life",
+    "text": "Personal life\nI have an amazing wife and three young children that I get to spend most of my time with. We stay active in our local Church and love spending time at the lake cabin in the summer with extended family.\nAs a cancer survivor, I’ve volunteered as a mentor to cancer patients and survivors for more than a decade.\nMy main past times include exercise (rucking, weight training, sandbag training), hunting and woodworking - check out my un-maintained blog)"
   }
 ]

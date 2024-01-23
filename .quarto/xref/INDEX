@@ -1,29 +1,71 @@
 {
   "index.qmd": {
-    "index.html": "5477e4f5"
-  },
-  "about.qmd": {
-    "about.html": "89ed456b"
+    "index.html": "4cc03ee1"
   },
   "contact.qmd": {
-    "contact.html": "f4b48547"
+    "contact.html": "3c87d0d5"
   },
-  "writing.qmd": {
-    "writing.html": "cbb2ce25"
+  "posts/index.qmd": {
+    "index.html": "e762c902"
   },
-  "blog.qmd": {
-    "blog.html": "e67225c8"
-  },
-  "talks.qmd": {
-    "talks.html": "26c37bb4"
-  },
-  "teaching.qmd": {
-    "teaching.html": "775e040a"
+  "posts/announcing-proverbs-r-package/index.qmd": {
+    "index.html": "f9415360"
   },
   "talks/index.qmd": {
-    "index.html": "2aa9d1b8"
+    "index.html": "8b21856d"
   },
-  "blog/index.qmd": {
-    "index.html": "8fdb9233"
+  "posts/professional-financial-reports-with-rmarkdown/index.qmd": {
+    "index.html": "17bf293b"
+  },
+  "posts/announcing-the-cheatsheet-package/index.qmd": {
+    "index.html": "7e6e933d"
+  },
+  "posts/python-text-analysis-with-the-schrutepy-package/index.qmd": {
+    "index.html": "665bca79"
+  },
+  "posts/proverbs-esv-support/index.qmd": {
+    "index.html": "bb4b01de"
+  },
+  "posts/using-r-to-analyze-fargo-crime-data/index.qmd": {
+    "index.html": "563c1cbc"
+  },
+  "posts/using-github-action-python-telegram-meat/index.qmd": {
+    "index.html": "0470a1c0"
+  },
+  "posts/announcing-tidyusda-a-package-for-working-with-usda-data/index.qmd": {
+    "index.html": "5e7d0542"
+  },
+  "posts/how-would-hemingway-write-code/index.qmd": {
+    "index.html": "3d97ecff"
+  },
+  "posts/introducing-the-schrute-package-the-entire-transcripts-from-the-office/index.qmd": {
+    "index.html": "72c3df47"
+  },
+  "posts/my-first -linux-snapcraft-app/index.qmd": {
+    "index.html": "65a7b9a5"
+  },
+  "posts/building-a-corporate-r-package-for-pleasure-and-profit/index.qmd": {
+    "index.html": "84d7d60d"
+  },
+  "posts/roam-attribute-table-analysis/index.qmd": {
+    "index.html": "90b6a3e2"
+  },
+  "posts/introducing-schrute-jl-the-office-transcripts-data-set-for-julia/index.qmd": {
+    "index.html": "b2445929"
+  },
+  "posts/tidyUSDA-version-031-is-available/index.qmd": {
+    "index.html": "a27548de"
+  },
+  "posts/using-the-biblepi-program/index.qmd": {
+    "index.html": "99842b92"
+  },
+  "teaching.qmd": {
+    "teaching.html": "5a35f6f8"
+  },
+  "writing.qmd": {
+    "writing.html": "e5c3f825"
+  },
+  "talks/professional-financial-reports-with-rmarkdown/index.qmd": {
+    "index.html": "2b579ee5"
   }
 }

@@ -1,0 +1,26 @@
+---
+categories:
+- R
+- reporting
+- quarto
+- finance
+date: 2021-01-06
+description: Paramaterizing for profit
+image: pro_reports.png
+title: Professional Financial Reports with RMarkdown
+author: Brad Lindblad
+---
+
+[LinkedIn](https://www.linkedin.com/in/bradlindblad/) \| [Github](https://github.com/bradlindblad/) \| [Blog](https://technistema.com/) \| [Subscribe](https://technistema.com/contact/)
+
+![](pro_reports.png)
+
+I recently gave a lightning talk at the [Financial Industry R Meetup](https://www.meetup.com/RStudio-Enterprise-Community-Meetup/events/274718908/) on how you can use RMarkdown to create extremely professional reports using RMarkdown and a slew of other popular R tools.
+
+You can re-watch the talk on [Youtube](https://www.youtube.com/watch?v=JsaGSrM8aZ0)
+
+You can also read the directions and overview at the [Github repo](https://github.com/bradlindblad/pro_reports_talk).
+
+------------------------------------------------------------------------
+
+***Want more content like this?*** [Subscribe here](https://technistema.com/contact/)

@@ -1,0 +1,66 @@
+
+---
+categories:
+- python
+- raspberry pi
+- faith
+date: 2020-01-19
+description: Listen to a random Bible verse on a Raspberry Pi
+image: biblepi.png
+title: Using the Biblepi Program
+author: Brad Lindblad
+---
+
+[LinkedIn](https://www.linkedin.com/in/bradlindblad/) | [Github](https://github.com/bradlindblad/) | [Blog](https://technistema.com/) | [Subscribe](https://technistema.com/contact/)
+
+![](biblepi.png)
+
+
+The codebase for a long-suffering hobby project of mine is now stable on [Github](https://github.com/bradlindblad/biblepi). The gist of it is, a small python3 program to run on a little computer (I used a Raspberry Pi 3) attached to a touchscreen to play a random New Testament book whenever I want. Obviously there are great apps like [YouVersion](https://www.youversion.com/) that will read the bible to you but I wanted something I could put a timer on to play in the kid's room before bed or in my kitchen as we cook.
+
+This simple program does just that. I have it running on Ubuntu Mate 18.04, which is a lightweight Ubuntu distro that I've come to love, although you can use any os that you see fit. The ubuntu is displayed on a small $30 touchscreen [from amazon](https://www.amazon.com/gp/product/B07S82CN57/ref=ppx_yo_dt_b_asin_title_o05_s00?ie=UTF8&psc=1) and the audio sings through a cheap speaker also from amazon.
+
+The UI is simple:
+
+![](1.png)
+
+You can either set a timer to play a random bible book for *n* minutes, or hit freeplay and play a book for as long as you want.
+
+![](2.png)
+
+I think the baby linux on the tiny screen is adorable:
+
+![](3.jpg)
+
+
+## Quickstart 
+To get started, clone the repo
+
+```git
+git clone https://github.com/bradlindblad/biblepi
+```
+
+And then install requirements
+
+```git
+pip install -r requirements.txt
+```
+Note that this program uses the vlc library within the root folder, so if you already have vlc installed you probably want to isolate this program in a container or virtual environment. 
+
+At this point everything should be squared away, so all you have to do is run the main python program
+
+```bash
+python3 main.py  
+```
+
+On non-unix (Windows)
+
+```bash
+python main.py
+```
+
+If you have any improvements you'd like to suggest or if you want to give the repo a star, visit it at: [https://github.com/bradlindblad/biblepi](https://github.com/bradlindblad/biblepi)
+
+  
+---
+***Want more content like this?*** [ Subscribe here](https://technistema.com/contact/)

@@ -1,0 +1,32 @@
+---
+categories:
+- R
+- R package
+- agriculture
+date: 2021-03-11
+description: Latest tidyUSDA release
+image: tidyusda.png
+title: tidyUSDA Version 0.3.1 Is Now Available
+author: Brad Lindblad
+---
+
+
+[LinkedIn](https://www.linkedin.com/in/bradlindblad/) \| [Github](https://github.com/bradlindblad/) \| [Blog](https://technistema.com/) \| [Subscribe](https://technistema.com/contact/)
+
+![](tidyusda.png)
+
+Previously there was an issue with certain calls to the `tidyUSDA::getQuickstat()` function, where values that included an "&" were not passing through the API call.
+
+This error has been resolved. Please updated your version of {tidyUSDA} with
+
+`install.packages("tidyUSDA")`
+
+You can check that you have the latest version with `packageVersion("tidyUSDA")`, which should return `[1] ‘0.3.1’`
+
+I appreciate the community helping to continually improve {tidyUSDA}!
+
+Learn more about {tidyUSDA} at its [website](https://bradlindblad.github.io/tidyUSDA/)
+
+------------------------------------------------------------------------
+
+***Want more content like this?*** [Subscribe here](https://technistema.com/contact/)

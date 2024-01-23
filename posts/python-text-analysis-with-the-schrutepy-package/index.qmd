@@ -1,0 +1,349 @@
+---
+categories:
+- python
+- analysis
+- python package
+date: 2020-01-18
+description: A python version of the R package schrute is now available
+image: schrutepy.png
+title: Python Text Analysis With the Schrutepy Package
+author: Brad Lindblad
+---
+
+[LinkedIn](https://www.linkedin.com/in/bradlindblad/) \| [Github](https://github.com/bradlindblad/) \| [Blog](https://technistema.com/) \| [Subscribe](https://technistema.com/contact/)
+
+![](schrutepy.png)
+
+Following the success of the [{schrute} R package](https://bradlindblad.github.io/schrute/index.html), many requests came in for the same dataset ported over to Python. The **schrute** and **schrutepy** packages serve one purpose only: to load the entire transcripts from [The Office](https://www.imdb.com/title/tt0386676/), so you can perform NLP, text analysis or whatever with this fun dataset.
+
+## Quick start
+
+Install the package with pip:
+
+```bash         
+pip install schrutepy
+```
+
+Then import the dataset into a dataframe:
+
+```python         
+from schrutepy import schrutepy
+
+df = schrutepy.load_schrute()
+```
+
+That's it. Now you're ready.
+
+## Long example
+
+Now we'll quickly work through some common elementary text analysis functions.
+
+``` python
+from schrutepy import schrutepy
+from wordcloud import WordCloud, STOPWORDS, ImageColorGenerator
+import matplotlib.pyplot as plt
+from matplotlib.pyplot import figure
+import nltk
+from nltk.corpus import stopwords
+from PIL import Image
+import numpy as np
+import collections
+import pandas as pd
+```
+
+Load the entire transcript with the load_schrute function
+
+``` python
+df = schrutepy.load_schrute()
+```
+
+Inspect the data
+
+``` python
+df.head()
+```
+
+<div>
+
+```{=html}
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+```
+<table>
+<thead>
+<tr class="header">
+<th><p></p></th>
+<th><p>index</p></th>
+<th><p>season</p></th>
+<th><p>episode</p></th>
+<th><p>episode_name</p></th>
+<th><p>director</p></th>
+<th><p>writer</p></th>
+<th><p>character</p></th>
+<th><p>text</p></th>
+<th><p>text_w_direction</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><p>0</p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>Pilot</p></td>
+<td><p>Ken Kwapis</p></td>
+<td><p>Ricky Gervais;Stephen Merchant;Greg Daniels</p></td>
+<td><p>Michael</p></td>
+<td><p>All right Jim. Your quarterlies look very good...</p></td>
+<td><p>All right Jim. Your quarterlies look very good...</p></td>
+</tr>
+<tr class="even">
+<td><p>1</p></td>
+<td><p>2</p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>Pilot</p></td>
+<td><p>Ken Kwapis</p></td>
+<td><p>Ricky Gervais;Stephen Merchant;Greg Daniels</p></td>
+<td><p>Jim</p></td>
+<td><p>Oh, I told you. I couldnt close it. So...</p></td>
+<td><p>Oh, I told you. I couldnt close it. So...</p></td>
+</tr>
+<tr class="odd">
+<td><p>2</p></td>
+<td><p>3</p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>Pilot</p></td>
+<td><p>Ken Kwapis</p></td>
+<td><p>Ricky Gervais;Stephen Merchant;Greg Daniels</p></td>
+<td><p>Michael</p></td>
+<td><p>So youve come to the master for guidance? Is ...</p></td>
+<td><p>So youve come to the master for guidance? Is ...</p></td>
+</tr>
+<tr class="even">
+<td><p>3</p></td>
+<td><p>4</p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>Pilot</p></td>
+<td><p>Ken Kwapis</p></td>
+<td><p>Ricky Gervais;Stephen Merchant;Greg Daniels</p></td>
+<td><p>Jim</p></td>
+<td><p>Actually, you called me in here, but yeah.</p></td>
+<td><p>Actually, you called me in here, but yeah.</p></td>
+</tr>
+<tr class="odd">
+<td><p>4</p></td>
+<td><p>5</p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>Pilot</p></td>
+<td><p>Ken Kwapis</p></td>
+<td><p>Ricky Gervais;Stephen Merchant;Greg Daniels</p></td>
+<td><p>Michael</p></td>
+<td><p>All right. Well, let me show you how its done.</p></td>
+<td><p>All right. Well, let me show you how its done.</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+Some of the records don't contain dialogue
+
+``` python
+df = df.dropna()
+```
+
+Create a wordcloud of all the text in the entire series
+
+``` python
+text = " ".join(review for review in df.text)
+```
+
+``` python
+print ("There are {} words in the combination of all review.".format(len(text)))
+```
+
+```         
+There are 3001517 words in the combination of all review.
+```
+
+``` python
+# Create stopword list:
+nltk.download('stopwords')
+stopWords = set(stopwords.words('english'))
+
+# Generate a word cloud image
+wordcloud = WordCloud(stopwords=stopWords, background_color="white").generate(text)
+
+# Display the generated image:
+# the matplotlib way:
+plt.figure(figsize=[30,15])
+plt.imshow(wordcloud, interpolation='bilinear')
+plt.axis("off")
+plt.show()
+```
+
+```         
+[nltk_data] Downloading package stopwords to /home/xps/nltk_data...
+[nltk_data]   Package stopwords is already up-to-date!
+```
+
+![](output_10_1.png)
+
+Let's do this same thing for a few of the characters. Might as well make a function at this point...
+
+``` python
+def plotDunder(character, df):
+    mydf = df[df.character == character]
+    text1 = " ".join(review for review in mydf.text)
+    # Generate a word cloud image
+    wordcloud = WordCloud(stopwords=stopWords, background_color="white").generate(text1)
+
+    # Display the generated image:
+    # the matplotlib way:
+    plt.figure(figsize=[15,7])
+    plt.imshow(wordcloud, interpolation='bilinear')
+    plt.title(character)
+    plt.axis("off")
+    plt.show()
+    
+```
+
+``` python
+fav = ["Michael", "David Wallace", "Dwight", "Jim", "Pam", "Oscar", "Phyllis", "Creed", "Ryan",]
+```
+
+``` python
+for i in fav:
+    plotDunder(i, df)
+```
+
+![](output_14_0.png)
+
+![](output_14_1.png)
+
+![](output_14_2.png)
+
+![](output_14_3.png)
+
+![](output_14_4.png)
+
+![](output_14_5.png)
+
+![](output_14_6.png)
+
+![](output_14_7.png)
+
+![](output_14_8.png)
+
+Let's make on in the shape of Dwight's large head
+
+``` python
+dwight_mask = np.array(Image.open("schrutepy.png"))
+```
+
+``` python
+# Create a word cloud image
+wc = WordCloud(background_color="white", max_words=1000, mask=dwight_mask,
+               stopwords=stopWords, contour_width=1, contour_color='grey')
+
+# Generate a wordcloud
+wc.generate(text)
+
+
+# show
+plt.figure(figsize=[30,15])
+plt.imshow(wc, interpolation='bilinear')
+plt.axis("off")
+plt.show()
+
+
+wc.to_file("final_schrute.png")
+```
+
+![](output_17_0.png)
+
+```         
+<wordcloud.wordcloud.WordCloud at 0x7fa1036a8b00>
+```
+
+Now let's find and plot the most common word spoken by my favorite characters
+
+``` python
+def commonWord(character, df):
+    mydf = df[df.character == character]
+    text = " ".join(review for review in mydf.text)
+    wordcount = {}
+    # To eliminate duplicates, remember to split by punctuation, and use case demiliters.
+    for word in text.lower().split():
+        word = word.replace(".","")
+        word = word.replace(",","")
+        word = word.replace(":","")
+        word = word.replace("\"","")
+        word = word.replace("!","")
+        word = word.replace("â€œ","")
+        word = word.replace("â€˜","")
+        word = word.replace("*","")
+        if word not in stopWords:
+            if word not in wordcount:
+                wordcount[word] = 1
+            else:
+                wordcount[word] += 1
+
+    # Print most common word
+    n_print = int(10)
+#     print("\nOK. The {} most common words are as follows\n".format(n_print))
+    word_counter = collections.Counter(wordcount)
+    for word, count in word_counter.most_common(n_print):
+        pass
+    # Close the file
+    # Draw a bar chart
+    lst = word_counter.most_common(n_print)
+    df = pd.DataFrame(lst, columns = ['Word', 'Count'])
+    df.plot.bar(x='Word',y='Count', title=character)
+```
+
+``` python
+for i in fav:
+    commonWord(i, df)
+```
+
+![](output_20_0.png)
+
+![](output_20_1.png)
+
+![](output_20_2.png)
+
+![](output_20_3.png)
+
+![](output_20_4.png)
+
+![](output_20_5.png)
+
+![](output_20_6.png)
+
+![](output_20_7.png)
+
+![](output_20_8.png)
+
+### Star this repo on Github?
+
+[![GitHub stars](https://img.shields.io/github/stars/bradlindblad/schrutepy?style=social&label=Star&maxAge=2592000)](https://GitHub.com/bradlindblad/schrutepy/)
+
+------------------------------------------------------------------------
+
+***Want more content like this?*** [Subscribe here](https://technistema.com/contact/)

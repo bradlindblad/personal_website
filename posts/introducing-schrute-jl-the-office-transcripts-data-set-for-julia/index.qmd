@@ -1,0 +1,27 @@
+---
+categories:
+- julia
+- julia package
+- text analysis
+date: 2020-04-25
+description: Schrute, but in Julia
+image: schrute.png
+title: 'Introducing Schrute.jl: The Office Transcripts Data Set for Julia'
+author: Brad Lindblad
+---
+
+[LinkedIn](https://www.linkedin.com/in/bradlindblad/) | [Github](https://github.com/bradlindblad/) | [Blog](https://technistema.com/) | [Subscribe](https://technistema.com/contact/)
+
+![](schrute.png)
+
+In an effort to broaden my horizons, I've ported the popular Schrute package from both [R](https://bradlindblad.github.io/schrute/) and [python](https://github.com/bradlindblad/schrutepy) to the [Julia language](https://julialang.org/).
+
+The package has one function which returns a dataframe containing the entire transcripts from The Office; 55130 lines in 9 seasons. There are also attribute fields such as writer, director and imdb score for each episode.
+
+For a complete rundown (Charles Miner), see the [package tutorial](https://bradlindblad.github.io/Schrute.jl/tutorial.html), or view the source code at the [Github repo](https://github.com/bradlindblad/Schrute.jl).
+
+
+---
+  ***Want more content like this?***
+
+  [Subscribe here](https://technistema.com/contact/)

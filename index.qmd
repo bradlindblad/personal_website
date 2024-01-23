@@ -21,24 +21,60 @@ about:
 
 ## Bio
 
-He is a data scientist.
+I'm a Data Scientist working in the farm credit system out of Fargo, North Dakota. I have created open source projects that have been downloaded over 50,000 times, created Business Intelligence and Data Science teams as large financial institutions and taught coding and data science to hundreds along the way. My main tech stack is [R](%5Bhttps://www.r-project.org) and [python](https://www.python.org/) along with SQL, [Julia](https://julialang.org/) and a few others.
+
+I attended North Dakota State University and grabbed a BA in Business Administration as well as an MBA later on in my career.
+
+I started off my career in transportation and eventually migrated to the data side of things; most recently as a Business Intelligence Strategist at a regional bank and now as a Data Scientist. I work in both AWS and Azure stacks and heavily utilize [Databricks](https://www.databricks.com/) and [Posit Connect](https://posit.co/products/enterprise/connect/) in my day-to-day. I'm a big fan of [Edward Tufte's](https://www.edwardtufte.com/tufte/books_vdqi) work in data visualization as well as [Stephen Few's](https://www.perceptualedge.com/).
+
+I am a certified [RStudio Tidyverse Instructor](https://education.rstudio.com/trainers/), and enjoy my time introducing folks to the R language as well as upskilling seasoned R operators. More [here](teaching.qmd).
+
+I sit on the board of the North Dakota State University [Center for Enterprise Business Analytics](https://www.ndsu.edu/business/research/centers_institutes/ceba/) and help guide their buildout of a world-class institution in the data realm.
 
 ------------------------------------------------------------------------
 
-## Projects
+## Interests
 
-He has a nice family.
+-   *Geospatial data science:* I've enjoyed working on dozens of geospatial projects throughout my career. I place special emphasis on the data visualization aspect of the art as well as user experience.
+
+-   *R shiny application development:* Building [Shiny](https://www.rstudio.com/products/shiny/) apps within the [Golem](https://thinkr-open.github.io/golem/) framework is my preferred delivery method for the data science projects I work on. I find the robustness of Golem mated with the unlimited potential of Shiny to far outshine the more rigid, institutional BI tools out there.
+
+-   *Open source:* I've created a small handful of open source projects that have been gaining traction.
+
+    -   📦 [schrute R package](https://bradlindblad.github.io/schrute/) creator, as well as versions for [python](https://github.com/bradlindblad/schrutepy) and [Julia](https://github.com/bradlindblad/Schrute.jl)
+
+    -   📦 [tidyUSDA R package](https://bradlindblad.github.io/tidyUSDA/) creator; grabs USDA data in tidy format for analysis
+
+    -   📦 [cheatsheets R package](https://bradlindblad.github.io/cheatsheet) creator; downloads all RStudio cheatsheets locally
+
+    -   📦 [proverbs R package](https://bradlindblad.github.io/proverbs/) creator; print out a daily Bible proverb to your console
 
 ------------------------------------------------------------------------
 
-## Skills
+## Selected publications
+
+-   [Professional Finance Reports with RMarkdown](https://github.com/bradlindblad/pro_reports_talk)
+
+-   [Building a Corporate R Package for Pleasure and Profit](https://medium.com/towards-data-science/build-a-corporate-r-package-for-pleasure-and-profit-78b73ce4ff4b?source=search_post---------2-------------------------------)
+
+-   [Build a Cryptocurrency Trading Bot With R](https://towardsdatascience.com/build-a-cryptocurrency-trading-bot-with-r-1445c429e1b1)
+
+-   [I Analyzed Fargo Crime Data and This is What I Found](https://towardsdatascience.com/i-analyzed-fargo-crime-data-and-this-is-what-i-found-25138e2d6bb1)
 
 ------------------------------------------------------------------------
 
-## Education & awards
+## Awards & patents
+
+-   **Prairie Business 40 Under 40 - [2017](https://www.inforum.com/business/prairie-business-magazine-announces-2017-40-under-40-list)**
+
+-   **Patent** - *Methods and apparatus for determining geographic pre-incident risk exposure*
 
 ------------------------------------------------------------------------
 
 ## Personal life
 
-Link to woodworking blog
+I have an amazing wife and three young children that I get to spend most of my time with. We stay active in our local Church and love spending time at the lake cabin in the summer with extended family.
+
+As a cancer survivor, I've volunteered as a mentor to cancer patients and survivors for more than a decade.
+
+My main past times include exercise (rucking, weight training, [sandbag training](https://www.goruck.com/pages/tribe-n-training?placement=&site_source=x&placement=&site_source=x&gad_source=1)), hunting and woodworking - check out my [un-maintained blog](https://lindbladart.wordpress.com/))

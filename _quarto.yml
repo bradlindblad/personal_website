@@ -13,14 +13,13 @@ website:
         text: Home
         
       - text: "{{< fa list >}} Blog"
-        href: blog
-        
-      - text: "{{< fa chalkboard-user >}} Teaching"
-        href: teaching.qmd
+        href: posts
         
       - text: "{{< fa bullhorn >}} Talks"
         href: talks
         
+      - text: "{{< fa chalkboard-user >}} Teaching"
+        href: teaching.qmd
         
       - text: "{{< fa book >}} Writing"
         href: writing.qmd
@@ -35,12 +34,19 @@ website:
         
       - icon: linkedin
         href: https://www.linkedin.com/in/bradlindblad
+    
+    # generates RSS feed
+    listing:
+      contents: posts
+      feed: true
 
 format:
   html:
     theme: lux
     css: styles.css
     toc: true
+    highlight-style: nord
+    code-link: true
 
-editor: visual
+
 

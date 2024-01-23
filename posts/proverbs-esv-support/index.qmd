@@ -1,0 +1,22 @@
+---
+categories:
+- R
+- R package
+- faith
+date: 2022-12-14
+description: ESV now supported in proverbs R package
+image: esv_proverbs.png
+title: proverbs Now Has Support for ESV Translation
+author: Brad Lindblad
+---
+
+
+[LinkedIn](https://www.linkedin.com/in/bradlindblad/) \| [Github](https://github.com/bradlindblad/) \| [Blog](https://technistema.com/) \| [Subscribe](https://technistema.com/contact/)
+
+![](esv_proverbs.png)
+
+The [proverbs](https://bradlindblad.github.io/proverbs/) R package now has support for the incredibly popular [ESV](https://www.esv.org/) Bible translation. View your daily proverb in this fluent and literal translation from the comfort of your R session.
+
+You do have to grab a free API key from the ESV folks in order to integrate the translation, but it will take you \< 5 minutes to set this up.
+
+For a detailed walkthrough - see [this vignette](https://bradlindblad.github.io/proverbs/articles/esv_api_key.html).
